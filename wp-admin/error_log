@@ -1,0 +1,626 @@
+[10-Nov-2025 17:01:00 UTC] PHP Warning:  include(/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php): Failed to open stream: No such file or directory in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[10-Nov-2025 17:01:00 UTC] PHP Warning:  include(): Failed opening '/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[10-Nov-2025 17:01:00 UTC] PHP Warning:  include(/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php): Failed to open stream: No such file or directory in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[10-Nov-2025 17:01:00 UTC] PHP Warning:  include(): Failed opening '/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[10-Nov-2025 17:01:00 UTC] PHP Fatal error:  Uncaught Error: Class "SimplePie\Cache" not found in /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-feed-cache.php:24
+Stack trace:
+#0 /home/esopmark/new.esopmarketplace.com/wp-includes/feed.php(824): require_once()
+#1 /home/esopmark/new.esopmarketplace.com/wp-includes/widgets.php(1587): fetch_feed('https://wordpre...')
+#2 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/dashboard.php(1625): wp_widget_rss_output('https://wordpre...', Array)
+#3 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/dashboard.php(1201): wp_dashboard_primary_output('dashboard_prima...', Array)
+#4 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/dashboard.php(1609): wp_dashboard_cached_rss_widget('dashboard_prima...', 'wp_dashboard_pr...', Array)
+#5 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/ajax-actions.php(430): wp_dashboard_primary()
+#6 /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-hook.php(324): wp_ajax_dashboard_widgets('')
+#7 /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#8 /home/esopmark/new.esopmarketplace.com/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#9 /home/esopmark/new.esopmarketplace.com/wp-admin/admin-ajax.php(192): do_action('wp_ajax_dashboa...')
+#10 {main}
+  thrown in /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-feed-cache.php on line 24
+[10-Nov-2025 21:14:17 UTC] PHP Warning:  include(/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php): Failed to open stream: No such file or directory in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[10-Nov-2025 21:14:17 UTC] PHP Warning:  include(): Failed opening '/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[10-Nov-2025 21:14:17 UTC] PHP Warning:  include(/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php): Failed to open stream: No such file or directory in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[10-Nov-2025 21:14:17 UTC] PHP Warning:  include(): Failed opening '/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[10-Nov-2025 21:14:17 UTC] PHP Fatal error:  Uncaught Error: Class "SimplePie\Cache" not found in /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-feed-cache.php:24
+Stack trace:
+#0 /home/esopmark/new.esopmarketplace.com/wp-includes/feed.php(824): require_once()
+#1 /home/esopmark/new.esopmarketplace.com/wp-includes/widgets.php(1587): fetch_feed('https://wordpre...')
+#2 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/dashboard.php(1625): wp_widget_rss_output('https://wordpre...', Array)
+#3 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/dashboard.php(1201): wp_dashboard_primary_output('dashboard_prima...', Array)
+#4 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/dashboard.php(1609): wp_dashboard_cached_rss_widget('dashboard_prima...', 'wp_dashboard_pr...', Array)
+#5 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/ajax-actions.php(430): wp_dashboard_primary()
+#6 /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-hook.php(324): wp_ajax_dashboard_widgets('')
+#7 /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#8 /home/esopmark/new.esopmarketplace.com/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#9 /home/esopmark/new.esopmarketplace.com/wp-admin/admin-ajax.php(192): do_action('wp_ajax_dashboa...')
+#10 {main}
+  thrown in /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-feed-cache.php on line 24
+[11-Nov-2025 19:26:08 UTC] PHP Warning:  include(/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php): Failed to open stream: No such file or directory in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[11-Nov-2025 19:26:08 UTC] PHP Warning:  include(): Failed opening '/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[11-Nov-2025 19:26:08 UTC] PHP Warning:  include(/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php): Failed to open stream: No such file or directory in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[11-Nov-2025 19:26:08 UTC] PHP Warning:  include(): Failed opening '/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[11-Nov-2025 19:26:08 UTC] PHP Fatal error:  Uncaught Error: Class "SimplePie\Cache" not found in /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-feed-cache.php:24
+Stack trace:
+#0 /home/esopmark/new.esopmarketplace.com/wp-includes/feed.php(824): require_once()
+#1 /home/esopmark/new.esopmarketplace.com/wp-includes/widgets.php(1587): fetch_feed('https://wordpre...')
+#2 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/dashboard.php(1625): wp_widget_rss_output('https://wordpre...', Array)
+#3 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/dashboard.php(1201): wp_dashboard_primary_output('dashboard_prima...', Array)
+#4 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/dashboard.php(1609): wp_dashboard_cached_rss_widget('dashboard_prima...', 'wp_dashboard_pr...', Array)
+#5 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/ajax-actions.php(430): wp_dashboard_primary()
+#6 /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-hook.php(324): wp_ajax_dashboard_widgets('')
+#7 /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#8 /home/esopmark/new.esopmarketplace.com/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#9 /home/esopmark/new.esopmarketplace.com/wp-admin/admin-ajax.php(192): do_action('wp_ajax_dashboa...')
+#10 {main}
+  thrown in /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-feed-cache.php on line 24
+[11-Nov-2025 19:33:50 UTC] WordPress database error Table 'wp_aioseo_notifications' already exists for query CREATE TABLE wp_aioseo_notifications (
+					id bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+					slug varchar(13) NOT NULL,
+					title text NOT NULL,
+					content longtext NOT NULL,
+					type varchar(64) NOT NULL,
+					level text NOT NULL,
+					notification_id bigint(20) unsigned DEFAULT NULL,
+					notification_name varchar(255) DEFAULT NULL,
+					start datetime DEFAULT NULL,
+					end datetime DEFAULT NULL,
+					button1_label varchar(255) DEFAULT NULL,
+					button1_action varchar(255) DEFAULT NULL,
+					button2_label varchar(255) DEFAULT NULL,
+					button2_action varchar(255) DEFAULT NULL,
+					dismissed tinyint(1) NOT NULL DEFAULT 0,
+					created datetime NOT NULL,
+					updated datetime NOT NULL,
+					PRIMARY KEY (id),
+					UNIQUE KEY ndx_aioseo_notifications_slug (slug),
+					KEY ndx_aioseo_notifications_dates (start, end),
+					KEY ndx_aioseo_notifications_type (type),
+					KEY ndx_aioseo_notifications_dismissed (dismissed)
+				) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci; made by require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), WP_Hook->do_action, WP_Hook->apply_filters, AIOSEO\Plugin\Common\Admin\Notices\Notices->init, AIOSEO\Plugin\Common\Main\Updates->addInitialCustomTablesForV4, AIOSEO\Plugin\Common\Utils\Database->execute
+[11-Nov-2025 19:33:50 UTC] WordPress database error Table 'wp_aioseo_posts' already exists for query CREATE TABLE wp_aioseo_posts (
+					id bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+					post_id bigint(20) unsigned NOT NULL,
+					title text DEFAULT NULL,
+					description text DEFAULT NULL,
+					keywords mediumtext DEFAULT NULL,
+					keyphrases longtext DEFAULT NULL,
+					page_analysis longtext DEFAULT NULL,
+					canonical_url text DEFAULT NULL,
+					og_title text DEFAULT NULL,
+					og_description text DEFAULT NULL,
+					og_object_type varchar(64) DEFAULT 'default',
+					og_image_type varchar(64) DEFAULT 'default',
+					og_image_custom_url text DEFAULT NULL,
+					og_image_custom_fields text DEFAULT NULL,
+					og_custom_image_width int(11) DEFAULT NULL,
+					og_custom_image_height int(11) DEFAULT NULL,
+					og_video varchar(255) DEFAULT NULL,
+					og_custom_url text DEFAULT NULL,
+					og_article_section text DEFAULT NULL,
+					og_article_tags text DEFAULT NULL,
+					twitter_use_og tinyint(1) DEFAULT 1,
+					twitter_card varchar(64) DEFAULT 'default',
+					twitter_image_type varchar(64) DEFAULT 'default',
+					twitter_image_custom_url text DEFAULT NULL,
+					twitter_image_custom_fields text DEFAULT NULL,
+					twitter_title text DEFAULT NULL,
+					twitter_description text DEFAULT NULL,
+					seo_score int(11) DEFAULT 0 NOT NULL,
+					schema_type varchar(20) DEFAULT NULL,
+					schema_type_options longtext DEFAULT NULL,
+					pillar_content tinyint(1) DEFAULT NULL,
+					robots_default tinyint(1) DEFAULT 1 NOT NULL,
+					robots_noindex tinyint(1) DEFAULT 0 NOT NULL,
+					robots_noarchive tinyint(1) DEFAULT 0 NOT NULL,
+					robots_nosnippet tinyint(1) DEFAULT 0 NOT NULL,
+					robots_nofollow tinyint(1) DEFAULT 0 NOT NULL,
+					robots_noimageindex tinyint(1) DEFAULT 0 NOT NULL,
+					robots_noodp tinyint(1) DEFAULT 0 NOT NULL,
+					robots_notranslate tinyint(1) DEFAULT 0 NOT NULL,
+					robots_max_snippet int(11) DEFAULT NULL,
+					robots_max_videopreview int(11) DEFAULT NULL,
+					robots_max_imagepreview varchar(20) DEFAULT 'none',
+					tabs mediumtext DEFAULT NULL,
+					images longtext DEFAULT NULL,
+					priority tinytext DEFAULT NULL,
+					frequency tinytext DEFAULT NULL,
+					videos longtext DEFAULT NULL,
+					video_thumbnail text DEFAULT NULL,
+					video_scan_date datetime DEFAULT NULL,
+					local_seo longtext DEFAULT NULL,
+					created datetime NOT NULL,
+					updated datetime NOT NULL,
+					PRIMARY KEY (id),
+					KEY ndx_aioseo_posts_post_id (post_id)
+				) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci; made by require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), WP_Hook->do_action, WP_Hook->apply_filters, AIOSEO\Plugin\Common\Admin\Notices\Notices->init, AIOSEO\Plugin\Common\Main\Updates->addInitialCustomTablesForV4, AIOSEO\Plugin\Common\Utils\Database->execute
+[11-Nov-2025 19:47:58 UTC] PHP Warning:  include(/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php): Failed to open stream: No such file or directory in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[11-Nov-2025 19:47:58 UTC] PHP Warning:  include(): Failed opening '/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[11-Nov-2025 19:47:58 UTC] PHP Warning:  include(/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php): Failed to open stream: No such file or directory in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[11-Nov-2025 19:47:58 UTC] PHP Warning:  include(): Failed opening '/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[11-Nov-2025 19:47:58 UTC] PHP Fatal error:  Uncaught Error: Class "SimplePie\Cache" not found in /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-feed-cache.php:24
+Stack trace:
+#0 /home/esopmark/new.esopmarketplace.com/wp-includes/feed.php(824): require_once()
+#1 /home/esopmark/new.esopmarketplace.com/wp-includes/widgets.php(1587): fetch_feed('https://wordpre...')
+#2 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/dashboard.php(1625): wp_widget_rss_output('https://wordpre...', Array)
+#3 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/dashboard.php(1201): wp_dashboard_primary_output('dashboard_prima...', Array)
+#4 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/dashboard.php(1609): wp_dashboard_cached_rss_widget('dashboard_prima...', 'wp_dashboard_pr...', Array)
+#5 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/ajax-actions.php(430): wp_dashboard_primary()
+#6 /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-hook.php(324): wp_ajax_dashboard_widgets('')
+#7 /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#8 /home/esopmark/new.esopmarketplace.com/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#9 /home/esopmark/new.esopmarketplace.com/wp-admin/admin-ajax.php(192): do_action('wp_ajax_dashboa...')
+#10 {main}
+  thrown in /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-feed-cache.php on line 24
+[12-Nov-2025 14:05:23 UTC] PHP Warning:  include(/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php): Failed to open stream: No such file or directory in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[12-Nov-2025 14:05:23 UTC] PHP Warning:  include(): Failed opening '/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[12-Nov-2025 14:05:23 UTC] PHP Warning:  include(/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php): Failed to open stream: No such file or directory in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[12-Nov-2025 14:05:23 UTC] PHP Warning:  include(): Failed opening '/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[12-Nov-2025 14:05:23 UTC] PHP Fatal error:  Uncaught Error: Class "SimplePie\Cache" not found in /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-feed-cache.php:24
+Stack trace:
+#0 /home/esopmark/new.esopmarketplace.com/wp-includes/feed.php(824): require_once()
+#1 /home/esopmark/new.esopmarketplace.com/wp-includes/widgets.php(1587): fetch_feed('https://wordpre...')
+#2 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/dashboard.php(1625): wp_widget_rss_output('https://wordpre...', Array)
+#3 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/dashboard.php(1201): wp_dashboard_primary_output('dashboard_prima...', Array)
+#4 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/dashboard.php(1609): wp_dashboard_cached_rss_widget('dashboard_prima...', 'wp_dashboard_pr...', Array)
+#5 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/ajax-actions.php(430): wp_dashboard_primary()
+#6 /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-hook.php(324): wp_ajax_dashboard_widgets('')
+#7 /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#8 /home/esopmark/new.esopmarketplace.com/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#9 /home/esopmark/new.esopmarketplace.com/wp-admin/admin-ajax.php(192): do_action('wp_ajax_dashboa...')
+#10 {main}
+  thrown in /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-feed-cache.php on line 24
+[12-Nov-2025 20:49:17 UTC] PHP Warning:  include(/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php): Failed to open stream: No such file or directory in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[12-Nov-2025 20:49:17 UTC] PHP Warning:  include(): Failed opening '/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[12-Nov-2025 20:49:17 UTC] PHP Warning:  include(/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php): Failed to open stream: No such file or directory in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[12-Nov-2025 20:49:17 UTC] PHP Warning:  include(): Failed opening '/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[12-Nov-2025 20:49:17 UTC] PHP Fatal error:  Uncaught Error: Class "SimplePie\Cache" not found in /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-feed-cache.php:24
+Stack trace:
+#0 /home/esopmark/new.esopmarketplace.com/wp-includes/feed.php(824): require_once()
+#1 /home/esopmark/new.esopmarketplace.com/wp-includes/widgets.php(1587): fetch_feed('https://wordpre...')
+#2 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/dashboard.php(1625): wp_widget_rss_output('https://wordpre...', Array)
+#3 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/dashboard.php(1201): wp_dashboard_primary_output('dashboard_prima...', Array)
+#4 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/dashboard.php(1609): wp_dashboard_cached_rss_widget('dashboard_prima...', 'wp_dashboard_pr...', Array)
+#5 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/ajax-actions.php(430): wp_dashboard_primary()
+#6 /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-hook.php(324): wp_ajax_dashboard_widgets('')
+#7 /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#8 /home/esopmark/new.esopmarketplace.com/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#9 /home/esopmark/new.esopmarketplace.com/wp-admin/admin-ajax.php(192): do_action('wp_ajax_dashboa...')
+#10 {main}
+  thrown in /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-feed-cache.php on line 24
+[12-Nov-2025 21:05:40 UTC] PHP Warning:  include(/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php): Failed to open stream: No such file or directory in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[12-Nov-2025 21:05:40 UTC] PHP Warning:  include(): Failed opening '/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[12-Nov-2025 21:05:40 UTC] PHP Warning:  include(/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php): Failed to open stream: No such file or directory in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[12-Nov-2025 21:05:40 UTC] PHP Warning:  include(): Failed opening '/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[12-Nov-2025 21:05:40 UTC] PHP Fatal error:  Uncaught Error: Class "SimplePie\Cache" not found in /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-feed-cache.php:24
+Stack trace:
+#0 /home/esopmark/new.esopmarketplace.com/wp-includes/feed.php(824): require_once()
+#1 /home/esopmark/new.esopmarketplace.com/wp-includes/widgets.php(1587): fetch_feed('https://wordpre...')
+#2 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/dashboard.php(1625): wp_widget_rss_output('https://wordpre...', Array)
+#3 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/dashboard.php(1201): wp_dashboard_primary_output('dashboard_prima...', Array)
+#4 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/dashboard.php(1609): wp_dashboard_cached_rss_widget('dashboard_prima...', 'wp_dashboard_pr...', Array)
+#5 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/ajax-actions.php(430): wp_dashboard_primary()
+#6 /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-hook.php(324): wp_ajax_dashboard_widgets('')
+#7 /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#8 /home/esopmark/new.esopmarketplace.com/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#9 /home/esopmark/new.esopmarketplace.com/wp-admin/admin-ajax.php(192): do_action('wp_ajax_dashboa...')
+#10 {main}
+  thrown in /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-feed-cache.php on line 24
+[13-Nov-2025 13:24:55 UTC] PHP Warning:  include(/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php): Failed to open stream: No such file or directory in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[13-Nov-2025 13:24:55 UTC] PHP Warning:  include(): Failed opening '/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[13-Nov-2025 13:24:55 UTC] PHP Warning:  include(/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php): Failed to open stream: No such file or directory in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[13-Nov-2025 13:24:55 UTC] PHP Warning:  include(): Failed opening '/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[13-Nov-2025 13:24:55 UTC] PHP Fatal error:  Uncaught Error: Class "SimplePie\Cache" not found in /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-feed-cache.php:24
+Stack trace:
+#0 /home/esopmark/new.esopmarketplace.com/wp-includes/feed.php(824): require_once()
+#1 /home/esopmark/new.esopmarketplace.com/wp-includes/widgets.php(1587): fetch_feed('https://wordpre...')
+#2 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/dashboard.php(1625): wp_widget_rss_output('https://wordpre...', Array)
+#3 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/dashboard.php(1201): wp_dashboard_primary_output('dashboard_prima...', Array)
+#4 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/dashboard.php(1609): wp_dashboard_cached_rss_widget('dashboard_prima...', 'wp_dashboard_pr...', Array)
+#5 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/ajax-actions.php(430): wp_dashboard_primary()
+#6 /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-hook.php(324): wp_ajax_dashboard_widgets('')
+#7 /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#8 /home/esopmark/new.esopmarketplace.com/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#9 /home/esopmark/new.esopmarketplace.com/wp-admin/admin-ajax.php(192): do_action('wp_ajax_dashboa...')
+#10 {main}
+  thrown in /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-feed-cache.php on line 24
+[13-Nov-2025 13:42:59 UTC] PHP Warning:  include(/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php): Failed to open stream: No such file or directory in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[13-Nov-2025 13:42:59 UTC] PHP Warning:  include(): Failed opening '/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[13-Nov-2025 13:42:59 UTC] PHP Warning:  include(/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php): Failed to open stream: No such file or directory in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[13-Nov-2025 13:42:59 UTC] PHP Warning:  include(): Failed opening '/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[13-Nov-2025 13:42:59 UTC] PHP Fatal error:  Uncaught Error: Class "SimplePie\Cache" not found in /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-feed-cache.php:24
+Stack trace:
+#0 /home/esopmark/new.esopmarketplace.com/wp-includes/feed.php(824): require_once()
+#1 /home/esopmark/new.esopmarketplace.com/wp-includes/widgets.php(1587): fetch_feed('https://wordpre...')
+#2 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/dashboard.php(1625): wp_widget_rss_output('https://wordpre...', Array)
+#3 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/dashboard.php(1201): wp_dashboard_primary_output('dashboard_prima...', Array)
+#4 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/dashboard.php(1609): wp_dashboard_cached_rss_widget('dashboard_prima...', 'wp_dashboard_pr...', Array)
+#5 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/ajax-actions.php(430): wp_dashboard_primary()
+#6 /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-hook.php(324): wp_ajax_dashboard_widgets('')
+#7 /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#8 /home/esopmark/new.esopmarketplace.com/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#9 /home/esopmark/new.esopmarketplace.com/wp-admin/admin-ajax.php(192): do_action('wp_ajax_dashboa...')
+#10 {main}
+  thrown in /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-feed-cache.php on line 24
+[17-Nov-2025 20:39:32 UTC] PHP Warning:  include(/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php): Failed to open stream: No such file or directory in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[17-Nov-2025 20:39:32 UTC] PHP Warning:  include(): Failed opening '/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[17-Nov-2025 20:39:32 UTC] PHP Warning:  include(/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php): Failed to open stream: No such file or directory in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[17-Nov-2025 20:39:32 UTC] PHP Warning:  include(): Failed opening '/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[17-Nov-2025 20:39:32 UTC] PHP Fatal error:  Uncaught Error: Class "SimplePie\Cache" not found in /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-feed-cache.php:24
+Stack trace:
+#0 /home/esopmark/new.esopmarketplace.com/wp-includes/feed.php(824): require_once()
+#1 /home/esopmark/new.esopmarketplace.com/wp-includes/widgets.php(1587): fetch_feed('https://wordpre...')
+#2 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/dashboard.php(1625): wp_widget_rss_output('https://wordpre...', Array)
+#3 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/dashboard.php(1201): wp_dashboard_primary_output('dashboard_prima...', Array)
+#4 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/dashboard.php(1609): wp_dashboard_cached_rss_widget('dashboard_prima...', 'wp_dashboard_pr...', Array)
+#5 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/ajax-actions.php(430): wp_dashboard_primary()
+#6 /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-hook.php(324): wp_ajax_dashboard_widgets('')
+#7 /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#8 /home/esopmark/new.esopmarketplace.com/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#9 /home/esopmark/new.esopmarketplace.com/wp-admin/admin-ajax.php(192): do_action('wp_ajax_dashboa...')
+#10 {main}
+  thrown in /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-feed-cache.php on line 24
+[18-Nov-2025 13:39:23 UTC] PHP Warning:  include(/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php): Failed to open stream: No such file or directory in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[18-Nov-2025 13:39:23 UTC] PHP Warning:  include(): Failed opening '/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[18-Nov-2025 13:39:23 UTC] PHP Warning:  include(/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php): Failed to open stream: No such file or directory in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[18-Nov-2025 13:39:23 UTC] PHP Warning:  include(): Failed opening '/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[18-Nov-2025 13:39:23 UTC] PHP Fatal error:  Uncaught Error: Class "SimplePie\Cache" not found in /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-feed-cache.php:24
+Stack trace:
+#0 /home/esopmark/new.esopmarketplace.com/wp-includes/feed.php(824): require_once()
+#1 /home/esopmark/new.esopmarketplace.com/wp-includes/widgets.php(1587): fetch_feed('https://wordpre...')
+#2 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/dashboard.php(1625): wp_widget_rss_output('https://wordpre...', Array)
+#3 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/dashboard.php(1201): wp_dashboard_primary_output('dashboard_prima...', Array)
+#4 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/dashboard.php(1609): wp_dashboard_cached_rss_widget('dashboard_prima...', 'wp_dashboard_pr...', Array)
+#5 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/ajax-actions.php(430): wp_dashboard_primary()
+#6 /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-hook.php(324): wp_ajax_dashboard_widgets('')
+#7 /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#8 /home/esopmark/new.esopmarketplace.com/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#9 /home/esopmark/new.esopmarketplace.com/wp-admin/admin-ajax.php(192): do_action('wp_ajax_dashboa...')
+#10 {main}
+  thrown in /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-feed-cache.php on line 24
+[18-Nov-2025 13:45:01 UTC] PHP Warning:  include(/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php): Failed to open stream: No such file or directory in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[18-Nov-2025 13:45:01 UTC] PHP Warning:  include(): Failed opening '/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[18-Nov-2025 13:45:01 UTC] PHP Warning:  include(/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php): Failed to open stream: No such file or directory in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[18-Nov-2025 13:45:01 UTC] PHP Warning:  include(): Failed opening '/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[18-Nov-2025 13:45:01 UTC] PHP Fatal error:  Uncaught Error: Class "SimplePie\Cache" not found in /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-feed-cache.php:24
+Stack trace:
+#0 /home/esopmark/new.esopmarketplace.com/wp-includes/feed.php(824): require_once()
+#1 /home/esopmark/new.esopmarketplace.com/wp-includes/widgets.php(1587): fetch_feed('https://wordpre...')
+#2 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/dashboard.php(1625): wp_widget_rss_output('https://wordpre...', Array)
+#3 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/dashboard.php(1201): wp_dashboard_primary_output('dashboard_prima...', Array)
+#4 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/dashboard.php(1609): wp_dashboard_cached_rss_widget('dashboard_prima...', 'wp_dashboard_pr...', Array)
+#5 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/ajax-actions.php(430): wp_dashboard_primary()
+#6 /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-hook.php(324): wp_ajax_dashboard_widgets('')
+#7 /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#8 /home/esopmark/new.esopmarketplace.com/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#9 /home/esopmark/new.esopmarketplace.com/wp-admin/admin-ajax.php(192): do_action('wp_ajax_dashboa...')
+#10 {main}
+  thrown in /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-feed-cache.php on line 24
+[18-Nov-2025 13:45:54 UTC] PHP Warning:  Attempt to read property "current_version" on null in /home/esopmark/new.esopmarketplace.com/wp-content/plugins/divi-plus/includes/src/class-update.php on line 135
+[18-Nov-2025 16:59:13 UTC] PHP Warning:  include(/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php): Failed to open stream: No such file or directory in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[18-Nov-2025 16:59:13 UTC] PHP Warning:  include(): Failed opening '/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[18-Nov-2025 16:59:13 UTC] PHP Warning:  include(/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php): Failed to open stream: No such file or directory in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[18-Nov-2025 16:59:13 UTC] PHP Warning:  include(): Failed opening '/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[18-Nov-2025 16:59:13 UTC] PHP Fatal error:  Uncaught Error: Class "SimplePie\Cache" not found in /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-feed-cache.php:24
+Stack trace:
+#0 /home/esopmark/new.esopmarketplace.com/wp-includes/feed.php(824): require_once()
+#1 /home/esopmark/new.esopmarketplace.com/wp-includes/widgets.php(1587): fetch_feed('https://wordpre...')
+#2 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/dashboard.php(1625): wp_widget_rss_output('https://wordpre...', Array)
+#3 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/dashboard.php(1201): wp_dashboard_primary_output('dashboard_prima...', Array)
+#4 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/dashboard.php(1609): wp_dashboard_cached_rss_widget('dashboard_prima...', 'wp_dashboard_pr...', Array)
+#5 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/ajax-actions.php(430): wp_dashboard_primary()
+#6 /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-hook.php(324): wp_ajax_dashboard_widgets('')
+#7 /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#8 /home/esopmark/new.esopmarketplace.com/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#9 /home/esopmark/new.esopmarketplace.com/wp-admin/admin-ajax.php(192): do_action('wp_ajax_dashboa...')
+#10 {main}
+  thrown in /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-feed-cache.php on line 24
+[18-Nov-2025 19:23:03 UTC] PHP Warning:  include(/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php): Failed to open stream: No such file or directory in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[18-Nov-2025 19:23:03 UTC] PHP Warning:  include(): Failed opening '/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[18-Nov-2025 19:23:03 UTC] PHP Warning:  include(/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php): Failed to open stream: No such file or directory in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[18-Nov-2025 19:23:03 UTC] PHP Warning:  include(): Failed opening '/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[18-Nov-2025 19:23:03 UTC] PHP Fatal error:  Uncaught Error: Class "SimplePie\Cache" not found in /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-feed-cache.php:24
+Stack trace:
+#0 /home/esopmark/new.esopmarketplace.com/wp-includes/feed.php(824): require_once()
+#1 /home/esopmark/new.esopmarketplace.com/wp-includes/widgets.php(1587): fetch_feed('https://wordpre...')
+#2 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/dashboard.php(1625): wp_widget_rss_output('https://wordpre...', Array)
+#3 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/dashboard.php(1201): wp_dashboard_primary_output('dashboard_prima...', Array)
+#4 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/dashboard.php(1609): wp_dashboard_cached_rss_widget('dashboard_prima...', 'wp_dashboard_pr...', Array)
+#5 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/ajax-actions.php(430): wp_dashboard_primary()
+#6 /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-hook.php(324): wp_ajax_dashboard_widgets('')
+#7 /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#8 /home/esopmark/new.esopmarketplace.com/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#9 /home/esopmark/new.esopmarketplace.com/wp-admin/admin-ajax.php(192): do_action('wp_ajax_dashboa...')
+#10 {main}
+  thrown in /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-feed-cache.php on line 24
+[18-Nov-2025 21:20:27 UTC] PHP Warning:  include(/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php): Failed to open stream: No such file or directory in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[18-Nov-2025 21:20:27 UTC] PHP Warning:  include(): Failed opening '/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[18-Nov-2025 21:20:27 UTC] PHP Warning:  include(/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php): Failed to open stream: No such file or directory in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[18-Nov-2025 21:20:27 UTC] PHP Warning:  include(): Failed opening '/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[18-Nov-2025 21:20:27 UTC] PHP Fatal error:  Uncaught Error: Class "SimplePie\Cache" not found in /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-feed-cache.php:24
+Stack trace:
+#0 /home/esopmark/new.esopmarketplace.com/wp-includes/feed.php(824): require_once()
+#1 /home/esopmark/new.esopmarketplace.com/wp-includes/widgets.php(1587): fetch_feed('https://wordpre...')
+#2 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/dashboard.php(1625): wp_widget_rss_output('https://wordpre...', Array)
+#3 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/dashboard.php(1201): wp_dashboard_primary_output('dashboard_prima...', Array)
+#4 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/dashboard.php(1609): wp_dashboard_cached_rss_widget('dashboard_prima...', 'wp_dashboard_pr...', Array)
+#5 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/ajax-actions.php(430): wp_dashboard_primary()
+#6 /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-hook.php(324): wp_ajax_dashboard_widgets('')
+#7 /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#8 /home/esopmark/new.esopmarketplace.com/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#9 /home/esopmark/new.esopmarketplace.com/wp-admin/admin-ajax.php(192): do_action('wp_ajax_dashboa...')
+#10 {main}
+  thrown in /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-feed-cache.php on line 24
+[19-Nov-2025 14:39:08 UTC] PHP Warning:  include(/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php): Failed to open stream: No such file or directory in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[19-Nov-2025 14:39:08 UTC] PHP Warning:  include(): Failed opening '/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[19-Nov-2025 14:39:08 UTC] PHP Warning:  include(/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php): Failed to open stream: No such file or directory in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[19-Nov-2025 14:39:08 UTC] PHP Warning:  include(): Failed opening '/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[19-Nov-2025 14:39:08 UTC] PHP Fatal error:  Uncaught Error: Class "SimplePie\Cache" not found in /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-feed-cache.php:24
+Stack trace:
+#0 /home/esopmark/new.esopmarketplace.com/wp-includes/feed.php(824): require_once()
+#1 /home/esopmark/new.esopmarketplace.com/wp-includes/widgets.php(1587): fetch_feed('https://wordpre...')
+#2 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/dashboard.php(1625): wp_widget_rss_output('https://wordpre...', Array)
+#3 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/dashboard.php(1201): wp_dashboard_primary_output('dashboard_prima...', Array)
+#4 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/dashboard.php(1609): wp_dashboard_cached_rss_widget('dashboard_prima...', 'wp_dashboard_pr...', Array)
+#5 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/ajax-actions.php(430): wp_dashboard_primary()
+#6 /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-hook.php(324): wp_ajax_dashboard_widgets('')
+#7 /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#8 /home/esopmark/new.esopmarketplace.com/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#9 /home/esopmark/new.esopmarketplace.com/wp-admin/admin-ajax.php(192): do_action('wp_ajax_dashboa...')
+#10 {main}
+  thrown in /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-feed-cache.php on line 24
+[19-Nov-2025 15:54:56 UTC] PHP Warning:  include(/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php): Failed to open stream: No such file or directory in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[19-Nov-2025 15:54:56 UTC] PHP Warning:  include(): Failed opening '/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[19-Nov-2025 15:54:56 UTC] PHP Warning:  include(/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php): Failed to open stream: No such file or directory in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[19-Nov-2025 15:54:56 UTC] PHP Warning:  include(): Failed opening '/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[19-Nov-2025 15:54:56 UTC] PHP Fatal error:  Uncaught Error: Class "SimplePie\Cache" not found in /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-feed-cache.php:24
+Stack trace:
+#0 /home/esopmark/new.esopmarketplace.com/wp-includes/feed.php(824): require_once()
+#1 /home/esopmark/new.esopmarketplace.com/wp-includes/widgets.php(1587): fetch_feed('https://wordpre...')
+#2 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/dashboard.php(1625): wp_widget_rss_output('https://wordpre...', Array)
+#3 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/dashboard.php(1201): wp_dashboard_primary_output('dashboard_prima...', Array)
+#4 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/dashboard.php(1609): wp_dashboard_cached_rss_widget('dashboard_prima...', 'wp_dashboard_pr...', Array)
+#5 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/ajax-actions.php(430): wp_dashboard_primary()
+#6 /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-hook.php(324): wp_ajax_dashboard_widgets('')
+#7 /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#8 /home/esopmark/new.esopmarketplace.com/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#9 /home/esopmark/new.esopmarketplace.com/wp-admin/admin-ajax.php(192): do_action('wp_ajax_dashboa...')
+#10 {main}
+  thrown in /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-feed-cache.php on line 24
+[19-Nov-2025 15:55:41 UTC] PHP Warning:  Undefined array key "acf-photo-gallery-groups" in /home/esopmark/new.esopmarketplace.com/wp-content/plugins/mapster-wp-maps/includes/acf-photo-gallery-field/includes/acf_photo_gallery_save.php on line 43
+[19-Nov-2025 15:56:06 UTC] PHP Warning:  foreach() argument must be of type array|object, int given in /home/esopmark/new.esopmarketplace.com/wp-content/plugins/all-in-one-wp-migration/uninstall.php on line 39
+[19-Nov-2025 16:12:06 UTC] PHP Warning:  include(/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php): Failed to open stream: No such file or directory in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[19-Nov-2025 16:12:06 UTC] PHP Warning:  include(): Failed opening '/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[19-Nov-2025 16:12:06 UTC] PHP Warning:  include(/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php): Failed to open stream: No such file or directory in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[19-Nov-2025 16:12:06 UTC] PHP Warning:  include(): Failed opening '/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[19-Nov-2025 16:12:06 UTC] PHP Fatal error:  Uncaught Error: Class "SimplePie\Cache" not found in /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-feed-cache.php:24
+Stack trace:
+#0 /home/esopmark/new.esopmarketplace.com/wp-includes/feed.php(824): require_once()
+#1 /home/esopmark/new.esopmarketplace.com/wp-includes/widgets.php(1587): fetch_feed('https://wordpre...')
+#2 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/dashboard.php(1625): wp_widget_rss_output('https://wordpre...', Array)
+#3 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/dashboard.php(1201): wp_dashboard_primary_output('dashboard_prima...', Array)
+#4 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/dashboard.php(1609): wp_dashboard_cached_rss_widget('dashboard_prima...', 'wp_dashboard_pr...', Array)
+#5 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/ajax-actions.php(430): wp_dashboard_primary()
+#6 /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-hook.php(324): wp_ajax_dashboard_widgets('')
+#7 /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#8 /home/esopmark/new.esopmarketplace.com/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#9 /home/esopmark/new.esopmarketplace.com/wp-admin/admin-ajax.php(192): do_action('wp_ajax_dashboa...')
+#10 {main}
+  thrown in /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-feed-cache.php on line 24
+[20-Nov-2025 14:43:25 UTC] PHP Warning:  include(/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php): Failed to open stream: No such file or directory in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[20-Nov-2025 14:43:25 UTC] PHP Warning:  include(): Failed opening '/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[20-Nov-2025 14:43:25 UTC] PHP Warning:  include(/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php): Failed to open stream: No such file or directory in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[20-Nov-2025 14:43:25 UTC] PHP Warning:  include(): Failed opening '/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[20-Nov-2025 14:43:25 UTC] PHP Fatal error:  Uncaught Error: Class "SimplePie\Cache" not found in /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-feed-cache.php:24
+Stack trace:
+#0 /home/esopmark/new.esopmarketplace.com/wp-includes/feed.php(824): require_once()
+#1 /home/esopmark/new.esopmarketplace.com/wp-includes/widgets.php(1587): fetch_feed('https://wordpre...')
+#2 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/dashboard.php(1625): wp_widget_rss_output('https://wordpre...', Array)
+#3 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/dashboard.php(1201): wp_dashboard_primary_output('dashboard_prima...', Array)
+#4 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/dashboard.php(1609): wp_dashboard_cached_rss_widget('dashboard_prima...', 'wp_dashboard_pr...', Array)
+#5 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/ajax-actions.php(430): wp_dashboard_primary()
+#6 /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-hook.php(324): wp_ajax_dashboard_widgets('')
+#7 /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#8 /home/esopmark/new.esopmarketplace.com/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#9 /home/esopmark/new.esopmarketplace.com/wp-admin/admin-ajax.php(192): do_action('wp_ajax_dashboa...')
+#10 {main}
+  thrown in /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-feed-cache.php on line 24
+[20-Nov-2025 16:20:38 UTC] PHP Warning:  include(/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php): Failed to open stream: No such file or directory in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[20-Nov-2025 16:20:38 UTC] PHP Warning:  include(): Failed opening '/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[20-Nov-2025 16:20:38 UTC] PHP Warning:  include(/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php): Failed to open stream: No such file or directory in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[20-Nov-2025 16:20:38 UTC] PHP Warning:  include(): Failed opening '/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[20-Nov-2025 16:20:38 UTC] PHP Fatal error:  Uncaught Error: Class "SimplePie\Cache" not found in /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-feed-cache.php:24
+Stack trace:
+#0 /home/esopmark/new.esopmarketplace.com/wp-includes/feed.php(824): require_once()
+#1 /home/esopmark/new.esopmarketplace.com/wp-includes/widgets.php(1587): fetch_feed('https://wordpre...')
+#2 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/dashboard.php(1625): wp_widget_rss_output('https://wordpre...', Array)
+#3 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/dashboard.php(1201): wp_dashboard_primary_output('dashboard_prima...', Array)
+#4 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/dashboard.php(1609): wp_dashboard_cached_rss_widget('dashboard_prima...', 'wp_dashboard_pr...', Array)
+#5 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/ajax-actions.php(430): wp_dashboard_primary()
+#6 /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-hook.php(324): wp_ajax_dashboard_widgets('')
+#7 /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#8 /home/esopmark/new.esopmarketplace.com/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#9 /home/esopmark/new.esopmarketplace.com/wp-admin/admin-ajax.php(192): do_action('wp_ajax_dashboa...')
+#10 {main}
+  thrown in /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-feed-cache.php on line 24
+[20-Nov-2025 18:31:01 UTC] PHP Warning:  Undefined array key 0 in /home/esopmark/new.esopmarketplace.com/wp-content/plugins/ninja-forms-multi-part/multi-part.php on line 231
+[20-Nov-2025 18:33:44 UTC] PHP Warning:  Undefined array key 0 in /home/esopmark/new.esopmarketplace.com/wp-content/plugins/ninja-forms-multi-part/multi-part.php on line 231
+[20-Nov-2025 19:31:59 UTC] PHP Warning:  include(/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php): Failed to open stream: No such file or directory in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[20-Nov-2025 19:31:59 UTC] PHP Warning:  include(): Failed opening '/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[20-Nov-2025 19:31:59 UTC] PHP Warning:  include(/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php): Failed to open stream: No such file or directory in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[20-Nov-2025 19:31:59 UTC] PHP Warning:  include(): Failed opening '/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[20-Nov-2025 19:31:59 UTC] PHP Fatal error:  Uncaught Error: Class "SimplePie\Cache" not found in /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-feed-cache.php:24
+Stack trace:
+#0 /home/esopmark/new.esopmarketplace.com/wp-includes/feed.php(824): require_once()
+#1 /home/esopmark/new.esopmarketplace.com/wp-includes/widgets.php(1587): fetch_feed('https://wordpre...')
+#2 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/dashboard.php(1625): wp_widget_rss_output('https://wordpre...', Array)
+#3 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/dashboard.php(1201): wp_dashboard_primary_output('dashboard_prima...', Array)
+#4 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/dashboard.php(1609): wp_dashboard_cached_rss_widget('dashboard_prima...', 'wp_dashboard_pr...', Array)
+#5 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/ajax-actions.php(430): wp_dashboard_primary()
+#6 /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-hook.php(324): wp_ajax_dashboard_widgets('')
+#7 /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#8 /home/esopmark/new.esopmarketplace.com/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#9 /home/esopmark/new.esopmarketplace.com/wp-admin/admin-ajax.php(192): do_action('wp_ajax_dashboa...')
+#10 {main}
+  thrown in /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-feed-cache.php on line 24
+[21-Nov-2025 14:33:06 UTC] PHP Warning:  include(/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php): Failed to open stream: No such file or directory in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[21-Nov-2025 14:33:06 UTC] PHP Warning:  include(): Failed opening '/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[21-Nov-2025 14:33:06 UTC] PHP Warning:  include(/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php): Failed to open stream: No such file or directory in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[21-Nov-2025 14:33:06 UTC] PHP Warning:  include(): Failed opening '/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[21-Nov-2025 14:33:06 UTC] PHP Fatal error:  Uncaught Error: Class "SimplePie\Cache" not found in /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-feed-cache.php:24
+Stack trace:
+#0 /home/esopmark/new.esopmarketplace.com/wp-includes/feed.php(824): require_once()
+#1 /home/esopmark/new.esopmarketplace.com/wp-includes/widgets.php(1587): fetch_feed('https://wordpre...')
+#2 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/dashboard.php(1625): wp_widget_rss_output('https://wordpre...', Array)
+#3 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/dashboard.php(1201): wp_dashboard_primary_output('dashboard_prima...', Array)
+#4 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/dashboard.php(1609): wp_dashboard_cached_rss_widget('dashboard_prima...', 'wp_dashboard_pr...', Array)
+#5 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/ajax-actions.php(430): wp_dashboard_primary()
+#6 /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-hook.php(324): wp_ajax_dashboard_widgets('')
+#7 /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#8 /home/esopmark/new.esopmarketplace.com/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#9 /home/esopmark/new.esopmarketplace.com/wp-admin/admin-ajax.php(192): do_action('wp_ajax_dashboa...')
+#10 {main}
+  thrown in /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-feed-cache.php on line 24
+[25-Nov-2025 14:20:53 UTC] PHP Warning:  include(/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php): Failed to open stream: No such file or directory in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[25-Nov-2025 14:20:53 UTC] PHP Warning:  include(): Failed opening '/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[25-Nov-2025 14:20:53 UTC] PHP Warning:  include(/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php): Failed to open stream: No such file or directory in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[25-Nov-2025 14:20:53 UTC] PHP Warning:  include(): Failed opening '/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[25-Nov-2025 14:20:53 UTC] PHP Fatal error:  Uncaught Error: Class "SimplePie\Cache" not found in /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-feed-cache.php:24
+Stack trace:
+#0 /home/esopmark/new.esopmarketplace.com/wp-includes/feed.php(824): require_once()
+#1 /home/esopmark/new.esopmarketplace.com/wp-includes/widgets.php(1587): fetch_feed('https://wordpre...')
+#2 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/dashboard.php(1625): wp_widget_rss_output('https://wordpre...', Array)
+#3 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/dashboard.php(1201): wp_dashboard_primary_output('dashboard_prima...', Array)
+#4 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/dashboard.php(1609): wp_dashboard_cached_rss_widget('dashboard_prima...', 'wp_dashboard_pr...', Array)
+#5 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/ajax-actions.php(430): wp_dashboard_primary()
+#6 /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-hook.php(324): wp_ajax_dashboard_widgets('')
+#7 /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#8 /home/esopmark/new.esopmarketplace.com/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#9 /home/esopmark/new.esopmarketplace.com/wp-admin/admin-ajax.php(192): do_action('wp_ajax_dashboa...')
+#10 {main}
+  thrown in /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-feed-cache.php on line 24
+[25-Nov-2025 16:37:21 UTC] PHP Warning:  include(/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php): Failed to open stream: No such file or directory in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[25-Nov-2025 16:37:21 UTC] PHP Warning:  include(): Failed opening '/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[25-Nov-2025 16:37:21 UTC] PHP Warning:  include(/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php): Failed to open stream: No such file or directory in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[25-Nov-2025 16:37:21 UTC] PHP Warning:  include(): Failed opening '/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[25-Nov-2025 16:37:21 UTC] PHP Fatal error:  Uncaught Error: Class "SimplePie\Cache" not found in /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-feed-cache.php:24
+Stack trace:
+#0 /home/esopmark/new.esopmarketplace.com/wp-includes/feed.php(824): require_once()
+#1 /home/esopmark/new.esopmarketplace.com/wp-includes/widgets.php(1587): fetch_feed('https://wordpre...')
+#2 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/dashboard.php(1625): wp_widget_rss_output('https://wordpre...', Array)
+#3 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/dashboard.php(1201): wp_dashboard_primary_output('dashboard_prima...', Array)
+#4 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/dashboard.php(1609): wp_dashboard_cached_rss_widget('dashboard_prima...', 'wp_dashboard_pr...', Array)
+#5 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/ajax-actions.php(430): wp_dashboard_primary()
+#6 /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-hook.php(324): wp_ajax_dashboard_widgets('')
+#7 /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#8 /home/esopmark/new.esopmarketplace.com/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#9 /home/esopmark/new.esopmarketplace.com/wp-admin/admin-ajax.php(192): do_action('wp_ajax_dashboa...')
+#10 {main}
+  thrown in /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-feed-cache.php on line 24
+[25-Nov-2025 16:38:20 UTC] PHP Parse error:  syntax error, unexpected token "<", expecting end of file in /home/esopmark/new.esopmarketplace.com/wp-content/themes/divi-child/functions.php on line 81
+[25-Nov-2025 17:13:37 UTC] PHP Warning:  include(/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php): Failed to open stream: No such file or directory in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[25-Nov-2025 17:13:37 UTC] PHP Warning:  include(): Failed opening '/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[25-Nov-2025 17:13:37 UTC] PHP Warning:  include(/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php): Failed to open stream: No such file or directory in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[25-Nov-2025 17:13:37 UTC] PHP Warning:  include(): Failed opening '/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[25-Nov-2025 17:13:37 UTC] PHP Fatal error:  Uncaught Error: Class "SimplePie\Cache" not found in /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-feed-cache.php:24
+Stack trace:
+#0 /home/esopmark/new.esopmarketplace.com/wp-includes/feed.php(824): require_once()
+#1 /home/esopmark/new.esopmarketplace.com/wp-includes/widgets.php(1587): fetch_feed('https://wordpre...')
+#2 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/dashboard.php(1625): wp_widget_rss_output('https://wordpre...', Array)
+#3 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/dashboard.php(1201): wp_dashboard_primary_output('dashboard_prima...', Array)
+#4 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/dashboard.php(1609): wp_dashboard_cached_rss_widget('dashboard_prima...', 'wp_dashboard_pr...', Array)
+#5 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/ajax-actions.php(430): wp_dashboard_primary()
+#6 /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-hook.php(324): wp_ajax_dashboard_widgets('')
+#7 /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#8 /home/esopmark/new.esopmarketplace.com/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#9 /home/esopmark/new.esopmarketplace.com/wp-admin/admin-ajax.php(192): do_action('wp_ajax_dashboa...')
+#10 {main}
+  thrown in /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-feed-cache.php on line 24
+[30-Nov-2025 17:00:22 UTC] PHP Warning:  include(/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php): Failed to open stream: No such file or directory in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[30-Nov-2025 17:00:22 UTC] PHP Warning:  include(): Failed opening '/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[30-Nov-2025 17:00:22 UTC] PHP Warning:  include(/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php): Failed to open stream: No such file or directory in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[30-Nov-2025 17:00:22 UTC] PHP Warning:  include(): Failed opening '/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[30-Nov-2025 17:00:22 UTC] PHP Fatal error:  Uncaught Error: Class "SimplePie\Cache" not found in /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-feed-cache.php:24
+Stack trace:
+#0 /home/esopmark/new.esopmarketplace.com/wp-includes/feed.php(824): require_once()
+#1 /home/esopmark/new.esopmarketplace.com/wp-includes/widgets.php(1587): fetch_feed('https://wordpre...')
+#2 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/dashboard.php(1625): wp_widget_rss_output('https://wordpre...', Array)
+#3 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/dashboard.php(1201): wp_dashboard_primary_output('dashboard_prima...', Array)
+#4 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/dashboard.php(1609): wp_dashboard_cached_rss_widget('dashboard_prima...', 'wp_dashboard_pr...', Array)
+#5 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/ajax-actions.php(430): wp_dashboard_primary()
+#6 /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-hook.php(324): wp_ajax_dashboard_widgets('')
+#7 /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#8 /home/esopmark/new.esopmarketplace.com/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#9 /home/esopmark/new.esopmarketplace.com/wp-admin/admin-ajax.php(192): do_action('wp_ajax_dashboa...')
+#10 {main}
+  thrown in /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-feed-cache.php on line 24
+[30-Nov-2025 20:01:52 UTC] PHP Warning:  include(/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php): Failed to open stream: No such file or directory in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[30-Nov-2025 20:01:52 UTC] PHP Warning:  include(): Failed opening '/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[30-Nov-2025 20:01:52 UTC] PHP Warning:  include(/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php): Failed to open stream: No such file or directory in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[30-Nov-2025 20:01:52 UTC] PHP Warning:  include(): Failed opening '/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[30-Nov-2025 20:01:52 UTC] PHP Fatal error:  Uncaught Error: Class "SimplePie\Cache" not found in /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-feed-cache.php:24
+Stack trace:
+#0 /home/esopmark/new.esopmarketplace.com/wp-includes/feed.php(824): require_once()
+#1 /home/esopmark/new.esopmarketplace.com/wp-includes/widgets.php(1587): fetch_feed('https://wordpre...')
+#2 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/dashboard.php(1625): wp_widget_rss_output('https://wordpre...', Array)
+#3 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/dashboard.php(1201): wp_dashboard_primary_output('dashboard_prima...', Array)
+#4 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/dashboard.php(1609): wp_dashboard_cached_rss_widget('dashboard_prima...', 'wp_dashboard_pr...', Array)
+#5 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/ajax-actions.php(430): wp_dashboard_primary()
+#6 /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-hook.php(324): wp_ajax_dashboard_widgets('')
+#7 /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#8 /home/esopmark/new.esopmarketplace.com/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#9 /home/esopmark/new.esopmarketplace.com/wp-admin/admin-ajax.php(192): do_action('wp_ajax_dashboa...')
+#10 {main}
+  thrown in /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-feed-cache.php on line 24
+[01-Dec-2025 01:54:07 UTC] PHP Warning:  include(/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php): Failed to open stream: No such file or directory in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[01-Dec-2025 01:54:07 UTC] PHP Warning:  include(): Failed opening '/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[01-Dec-2025 01:54:07 UTC] PHP Warning:  include(/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php): Failed to open stream: No such file or directory in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[01-Dec-2025 01:54:07 UTC] PHP Warning:  include(): Failed opening '/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[01-Dec-2025 01:54:07 UTC] PHP Fatal error:  Uncaught Error: Class "SimplePie\Cache" not found in /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-feed-cache.php:24
+Stack trace:
+#0 /home/esopmark/new.esopmarketplace.com/wp-includes/feed.php(824): require_once()
+#1 /home/esopmark/new.esopmarketplace.com/wp-includes/widgets.php(1587): fetch_feed('https://wordpre...')
+#2 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/dashboard.php(1625): wp_widget_rss_output('https://wordpre...', Array)
+#3 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/dashboard.php(1201): wp_dashboard_primary_output('dashboard_prima...', Array)
+#4 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/dashboard.php(1609): wp_dashboard_cached_rss_widget('dashboard_prima...', 'wp_dashboard_pr...', Array)
+#5 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/ajax-actions.php(430): wp_dashboard_primary()
+#6 /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-hook.php(324): wp_ajax_dashboard_widgets('')
+#7 /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#8 /home/esopmark/new.esopmarketplace.com/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#9 /home/esopmark/new.esopmarketplace.com/wp-admin/admin-ajax.php(192): do_action('wp_ajax_dashboa...')
+#10 {main}
+  thrown in /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-feed-cache.php on line 24
+[01-Dec-2025 13:52:41 UTC] PHP Warning:  include(/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php): Failed to open stream: No such file or directory in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[01-Dec-2025 13:52:41 UTC] PHP Warning:  include(): Failed opening '/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[01-Dec-2025 13:52:41 UTC] PHP Warning:  include(/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php): Failed to open stream: No such file or directory in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[01-Dec-2025 13:52:41 UTC] PHP Warning:  include(): Failed opening '/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[01-Dec-2025 13:52:41 UTC] PHP Fatal error:  Uncaught Error: Class "SimplePie\Cache" not found in /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-feed-cache.php:24
+Stack trace:
+#0 /home/esopmark/new.esopmarketplace.com/wp-includes/feed.php(824): require_once()
+#1 /home/esopmark/new.esopmarketplace.com/wp-includes/widgets.php(1587): fetch_feed('https://wordpre...')
+#2 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/dashboard.php(1625): wp_widget_rss_output('https://wordpre...', Array)
+#3 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/dashboard.php(1201): wp_dashboard_primary_output('dashboard_prima...', Array)
+#4 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/dashboard.php(1609): wp_dashboard_cached_rss_widget('dashboard_prima...', 'wp_dashboard_pr...', Array)
+#5 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/ajax-actions.php(430): wp_dashboard_primary()
+#6 /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-hook.php(324): wp_ajax_dashboard_widgets('')
+#7 /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#8 /home/esopmark/new.esopmarketplace.com/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#9 /home/esopmark/new.esopmarketplace.com/wp-admin/admin-ajax.php(192): do_action('wp_ajax_dashboa...')
+#10 {main}
+  thrown in /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-feed-cache.php on line 24
+[01-Dec-2025 14:07:26 UTC] PHP Warning:  include(/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php): Failed to open stream: No such file or directory in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[01-Dec-2025 14:07:26 UTC] PHP Warning:  include(): Failed opening '/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[01-Dec-2025 14:07:26 UTC] PHP Warning:  include(/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php): Failed to open stream: No such file or directory in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[01-Dec-2025 14:07:26 UTC] PHP Warning:  include(): Failed opening '/home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/library/SimplePie\Cache.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/esopmark/new.esopmarketplace.com/wp-includes/SimplePie/autoloader.php on line 126
+[01-Dec-2025 14:07:26 UTC] PHP Fatal error:  Uncaught Error: Class "SimplePie\Cache" not found in /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-feed-cache.php:24
+Stack trace:
+#0 /home/esopmark/new.esopmarketplace.com/wp-includes/feed.php(824): require_once()
+#1 /home/esopmark/new.esopmarketplace.com/wp-includes/widgets.php(1587): fetch_feed('https://wordpre...')
+#2 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/dashboard.php(1625): wp_widget_rss_output('https://wordpre...', Array)
+#3 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/dashboard.php(1201): wp_dashboard_primary_output('dashboard_prima...', Array)
+#4 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/dashboard.php(1609): wp_dashboard_cached_rss_widget('dashboard_prima...', 'wp_dashboard_pr...', Array)
+#5 /home/esopmark/new.esopmarketplace.com/wp-admin/includes/ajax-actions.php(430): wp_dashboard_primary()
+#6 /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-hook.php(324): wp_ajax_dashboard_widgets('')
+#7 /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#8 /home/esopmark/new.esopmarketplace.com/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#9 /home/esopmark/new.esopmarketplace.com/wp-admin/admin-ajax.php(192): do_action('wp_ajax_dashboa...')
+#10 {main}
+  thrown in /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-feed-cache.php on line 24

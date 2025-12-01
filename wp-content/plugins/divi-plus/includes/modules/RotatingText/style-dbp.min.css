@@ -1,0 +1,55 @@
+.et_divi_builder #et_builder_outer_content .dipl-rotating-text-wrap {
+	display: grid;
+	place-content: center;
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	overflow: hidden;
+	position: relative;
+	background: #e3e3e3;
+	color: #000000;
+	transition: background 300ms, transform 200ms;
+	text-align: center;
+	appearance: none;
+	border: 0 solid;
+	user-select: none;
+}
+.et_divi_builder #et_builder_outer_content .dipl-rotating-text-inner {
+	position: absolute;
+	inset: 0;
+	animation: dipl-text-rotation 8000ms linear infinite;
+	font-size: 16px;
+	transform-origin: center;
+}
+/* Styling individual characters */
+.et_divi_builder #et_builder_outer_content .dipl-rotating-text-inner span {
+	position: absolute;
+	transform: rotate(calc(var(--angle-step) * var(--index) * 1deg));
+	transform-origin: center;
+	inset: 5px;
+}
+/* Icon wrapper inside the button */
+.et_divi_builder #et_builder_outer_content .dipl_rotating_text_icon_wrapper{
+	position: relative;
+	width: 55px;
+	height: 55px;
+	overflow: hidden;
+	background: #fff;
+	border: 0 solid;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.et_divi_builder #et_builder_outer_content .dipl_rotating_text_icon_wrapper img{
+	width: 100%;
+	height: auto;
+}
+.et_divi_builder #et_builder_outer_content .dipl_rotating_text_icon_wrapper .et-pb-icon{
+	font-size: 28px;
+}
+
+/* Keyframe for text rotation */
+@keyframes dipl-text-rotation {
+	to { transform: rotate(360deg); }
+}

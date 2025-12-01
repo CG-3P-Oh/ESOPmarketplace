@@ -1,0 +1,127 @@
+
+.dipl_interactive_circle{
+	position: relative;
+	width: 100%;
+	max-width: 600px;
+	aspect-ratio: 1 / 1;
+	margin: auto;
+}
+.dipl_interactive_circle_wrap{
+	position: absolute;
+	inset: 0;
+	overflow: visible;
+}
+/* Make it stronger so builder side not creats the issue. */
+.dipl_interactive_circle > .et_pb_module_inner,
+.dipl_interactive_circle .dipl_interactive_circle_wrap .dipl_interactive_circle_item{
+	position: unset !important;
+	margin: 0 !important;
+}
+.dipl_interactive_circle_item > .et_pb_module_inner{
+	position: unset !important;
+}
+
+/* Item main style. */
+.dipl_interactive_circle_item__main{
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 80px;
+	height: 80px;
+	border-radius: 50px;
+	border: 1px solid #aaaaaa;
+	background-color: #f4f4f4;
+	cursor: pointer;
+	overflow: hidden;
+	transition: 0.3s;
+	z-index: 99;
+}
+.dipl_interactive_circle_item__main_content_inner{
+	width: 100%;
+}
+.dipl_interactive_circle_item__main img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.dipl_interactive_circle_item__main .et-pb-icon{
+	display: block;
+	font-size: 32px;
+}
+
+/* Item circle style. */
+.dipl_interactive_circle_item__main_content{
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: #f4f4f4;
+	text-align: center;
+	width: calc( 100% - 80px );
+	height: calc( 100% - 80px );
+	padding: 50px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border: 0 solid #000000;
+	border-radius: 50%;
+	opacity: 0;
+	transition: opacity 1s ease-in-out;
+	z-index: 8;
+}
+.dipl_interactive_circle_item.active .dipl_interactive_circle_item__main_content{
+	opacity: 1;
+	z-index: 9;
+}
+
+.dipl_icircle_item_image{
+	margin-bottom: 5px;
+}
+.dipl_icircle_item_image .et-pb-icon{
+	display: inline-block;
+	font-size: 50px;
+}
+.dipl_icircle_item_image img{
+	display: inline-block;
+	height: 120px;
+	object-fit: cover;
+}
+
+/* Button. */
+.dipl_icircle_item_button{
+	display: inline-block;
+	margin-top: 10px;
+}
+
+/* For mobile reset use class mobile-circle */
+@media ( max-width: 768px ) {
+	.dipl_interactive_circle.mobile-circle{
+		width: 100%;
+		height: auto !important;
+		aspect-ratio: unset !important;
+	}
+	.dipl_interactive_circle.mobile-circle .dipl_interactive_circle_wrap{
+		position: static;
+		display: flex;
+		flex-direction: column;
+		gap: 25px;
+	}
+	.dipl_interactive_circle.mobile-circle .dipl_interactive_circle_item__main{
+		position: relative !important;
+		left: 0 !important;
+		top: 0 !important;
+		margin: 0 auto;
+	}
+	.dipl_interactive_circle.mobile-circle  .dipl_interactive_circle_item__main_content{
+		position: relative !important;
+		opacity: 1 !important;
+		transform: none !important;
+		top: 0 !important;
+		left: 0 !important;
+		width: 100% !important;
+		height: auto !important;
+		border-radius: 10px;
+	}
+}

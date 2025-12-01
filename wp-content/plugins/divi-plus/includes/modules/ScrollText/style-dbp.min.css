@@ -1,0 +1,88 @@
+.et_divi_builder #et_builder_outer_content .dipl-scroll-text-inner{
+	font-size: 55px;
+	line-height: 1.3;
+}
+.et_divi_builder #et_builder_outer_content .dipl-scroll-text-inner span{
+	white-space: pre;
+	transition: all 0.4s ease !important;
+}
+.et_divi_builder #et_builder_outer_content .dipl-scroll-text-inner span.dipl_st_word{
+	display: inline-block;
+}
+.et_divi_builder #et_builder_outer_content .dipl-scroll-text-inner span.dipl_st_letter{
+	display: inline-block;
+	white-space: nowrap;
+}
+
+/* Fade effect for word & letter split. */
+.et_divi_builder #et_builder_outer_content .dipl_scroll_word_fade .dipl_st_word,
+.et_divi_builder #et_builder_outer_content .dipl_scroll_letter_fade .dipl_st_letter{
+	opacity: 0;
+}
+.et_divi_builder #et_builder_outer_content .dipl_scroll_text .dipl_scroll_word_fade .dipl_st_word.visible,
+.et_divi_builder #et_builder_outer_content .dipl_scroll_text .dipl_scroll_letter_fade .dipl_st_letter.visible{
+	opacity: 1;
+}
+
+/* Blur effect for word & letter split. */
+.et_divi_builder #et_builder_outer_content .dipl_scroll_word_blur .dipl_st_word,
+.et_divi_builder #et_builder_outer_content .dipl_scroll_letter_blur .dipl_st_letter{
+	filter: blur(6px);
+}
+.et_divi_builder #et_builder_outer_content .dipl_scroll_text .dipl_scroll_word_blur .dipl_st_word.visible,
+.et_divi_builder #et_builder_outer_content .dipl_scroll_text .dipl_scroll_letter_blur .dipl_st_letter.visible{
+	filter: blur(0) !important;
+}
+
+/* Color effect for word & letter split. */
+.et_divi_builder #et_builder_outer_content .dipl_scroll_word_color .dipl_st_word,
+.et_divi_builder #et_builder_outer_content .dipl_scroll_letter_color .dipl_st_letter{
+	color: #999999;
+}
+.et_divi_builder #et_builder_outer_content .dipl_scroll_word_color .dipl_st_word.visible,
+.et_divi_builder #et_builder_outer_content .dipl_scroll_letter_color .dipl_st_letter.visible{
+	color: #2ea3f2;
+}
+
+/* Slide effect for word & letter split. */
+.et_divi_builder #et_builder_outer_content .dipl_scroll_word_slide .dipl_st_word,
+.et_divi_builder #et_builder_outer_content .dipl_scroll_letter_slide .dipl_st_letter{
+	transform: translateY(40px);
+	opacity: 0;
+}
+.et_divi_builder #et_builder_outer_content .dipl_scroll_word_slide .dipl_st_word.visible,
+.et_divi_builder #et_builder_outer_content .dipl_scroll_letter_slide .dipl_st_letter.visible{
+	transform: translateY(0) !important;
+	opacity: 1;
+}
+
+/* 3D Flip effect for word & letter split. */
+.et_divi_builder #et_builder_outer_content .dipl_scroll_word_3d_flip .dipl_st_word,
+.et_divi_builder #et_builder_outer_content .dipl_scroll_letter_3d_flip .dipl_st_letter{
+	opacity: 0;
+	transform: perspective(1000px) rotateX(-90deg) translateY(100px);
+	transform-origin: center center;
+	transition: transform 0.9s cubic-bezier(0.75, 0, 0.25, 1), opacity 0.9s ease;
+}
+.et_divi_builder #et_builder_outer_content .dipl_scroll_word_3d_flip .dipl_st_word.visible,
+.et_divi_builder #et_builder_outer_content .dipl_scroll_letter_3d_flip .dipl_st_letter.visible{
+	opacity: 1;
+	transform: perspective(1000px) rotateX(0deg) translateY(0px);
+}
+.et_divi_builder #et_builder_outer_content .dipl_scroll_word_3d_flip .dipl_st_word.visible.reverse,
+.et_divi_builder #et_builder_outer_content .dipl_scroll_letter_3d_flip .dipl_st_letter.visible.reverse{
+	opacity: 0;
+	transform: perspective(1000px) rotateX(90deg) translateY(-100px);
+}
+
+/* Skew effect for word & letter split. */
+.et_divi_builder #et_builder_outer_content .dipl_scroll_word_skew .dipl_st_word,
+.et_divi_builder #et_builder_outer_content .dipl_scroll_letter_skew .dipl_st_letter{
+	transform: skewY(35deg);
+	opacity: 0;
+}
+.et_divi_builder #et_builder_outer_content .dipl_scroll_word_skew .dipl_st_word.visible,
+.et_divi_builder #et_builder_outer_content .dipl_scroll_letter_skew .dipl_st_letter.visible {
+	transform: skewY(0) !important;
+	opacity: 1;
+}

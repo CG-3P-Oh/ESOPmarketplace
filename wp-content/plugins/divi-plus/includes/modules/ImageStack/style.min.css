@@ -1,0 +1,111 @@
+/* For VD side only. */
+.dipl_image_stack_item > .et_pb_module_inner {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+/* All. */
+/* .dipl-image-stack-wrap{
+	overflow: hidden;
+} */
+.dipl_image_stack .dipl-image-stack-wrap{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.dipl_image_stack .dipl-image-stack-inner{
+	display: inline-flex;
+}
+.dipl_image_stack .dipl-image-stack-inner .dipl_image_stack_item{
+	margin-bottom: 0;
+	-webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.dipl_image_stack_item{
+	text-align: center;
+	-webkit-transition: all .3s ease-in-out;
+	transition: all .3s ease-in-out;
+}
+.dipl_image_stack .dipl-image-stack-inner:hover .dipl_image_stack_item{
+	margin-left: 0 !important;
+}
+
+.dipl_image_stack_item img,
+.dipl_image_stack_item span{
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+/* Tooltip. */
+.tippy-box:before {
+	position: absolute;
+}
+.tippy-box[data-placement="top"]:before,
+.tippy-box[data-placement="bottom"]:before{
+	left: 0;
+	width: 100%;
+	height: 15px;
+	background: inherit;
+}
+.tippy-box[data-placement="top"]:before{
+	bottom: -14px;
+	clip-path: polygon(
+		0 0,
+		100% 0,
+		100% calc(100% - 15px),
+		calc(50% + 15px) calc(100% - 15px),
+		50% 100%,
+		calc(50% - 15px) calc(100% - 15px),
+		0 calc(100% - 15px)
+	);
+}
+.tippy-box[data-placement="bottom"]:before{
+	top: -14px;
+	clip-path: polygon(
+		100% 15px,
+		calc(50% + 15px) 15px,
+		50% 0,
+		calc(50% - 15px) 15px,
+		0 15px,
+		0 100%,
+		100% 100%
+	);
+}
+.tippy-box[data-placement="left"]:before,
+.tippy-box[data-placement="right"]:before{
+	top: 0;
+	width: 15px;
+	height: 100%;
+	background: inherit;
+	box-sizing: border-box;
+}
+.tippy-box[data-placement="left"]:before{
+	right: -14px;
+	clip-path: polygon(
+		0 0,
+		calc(100% - 15px) 0,
+		calc(100% - 15px) calc(50% - 15px),
+		100% 50%,
+		calc(100% - 15px) calc(50% + 15px),
+		calc(100% - 15px) 100%,
+		0 100%
+	);
+}
+.tippy-box[data-placement="right"]:before{
+	left: -14px;
+	clip-path: polygon(
+		100% 0,
+		15px 0,
+		15px calc(50% - 15px),
+		0 50%,
+		15px calc(50% + 15px),
+		15px 100%,
+		100% 100%
+	);
+}
+.tippy-box .tippy-content{
+	padding: 10px 15px;
+}

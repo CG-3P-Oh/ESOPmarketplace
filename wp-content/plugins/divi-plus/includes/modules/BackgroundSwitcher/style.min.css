@@ -1,0 +1,92 @@
+.dipl_background_switcher_wrap{
+	position: relative;
+	overflow: hidden;
+}
+.dipl_background_switcher_inner{
+	display: flex;
+}
+
+/* Item. */
+.dipl_background_switcher .dipl_background_switcher_wrap .dipl_background_switcher_item{
+	margin-bottom: 0;
+}
+.dipl_background_switcher_item{
+	position: relative;
+	overflow: hidden;
+	flex: 1;
+	flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+	z-index: 3;
+	transition: 300ms;
+}
+.dipl_background_switcher_item > div,
+.dipl_background_switcher_item > .et_pb_module_inner{
+	height: 100%;
+}
+.dipl_bg_switcher_item_wrap{
+	position: relative;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+}
+.dipl_bg_switcher_content{
+	padding: 20px;
+}
+.dipl-bg-switcher-btn-wrap{
+	margin-top: 10px;
+}
+.dipl-bg-switcher-btn-wrap .et_pb_button{
+	display: inline-block;
+}
+
+.dipl_bg_switcher_hover_content{
+	overflow: hidden;
+	scrollbar-width: none;
+	transform-origin: bottom;
+	/* transition: 300ms; */
+	/* max-height: 0px; */
+	display: none;
+}
+.dipl_background_switcher_item:hover .dipl_bg_switcher_hover_content{
+	overflow: auto;
+	scrollbar-width: none;
+}
+
+/* Switcher image. */
+.dipl_background_switcher_image{
+	position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+	opacity: 0;
+    z-index: 1;
+    overflow: hidden;
+	transition-duration: 300ms;
+}
+.dipl_background_switcher_item.dipl-bg-switcher-hover + .dipl_background_switcher_image{
+	opacity: 1;
+	transform: scale(1.05);
+}
+/* Removed Overlay, as background field changed. */
+/* .dipl_background_switcher_image::after{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+} */
+.dipl_background_switcher_image img,
+.dipl_background_switcher_image .dipl_switcher_item_background{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+	background-color: #aaa;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}

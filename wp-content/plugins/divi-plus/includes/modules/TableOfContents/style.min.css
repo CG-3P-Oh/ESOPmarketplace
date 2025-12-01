@@ -1,0 +1,45 @@
+.dipl_table_of_contents{
+	background-color: #fafafa;
+}
+.dipl-table-of-contents-wrapper{
+	border: 1px solid #dddddd;
+}
+.dipl-table-of-contents-title{
+	padding: 20px;
+	font-size: 20px;
+	background-color: #101010;
+	color: #ffffff;
+}
+.dipl-table-of-contents-content{
+	padding: 20px;
+}
+
+.dipl-table-of-contents-content tableofcontents{
+	display: block;
+}
+
+/* Style each entry. */
+.dipl-table-of-contents-content tocsecentry{
+	position: relative;
+	display: block;
+	margin: 10px 0;
+	font-size: 16px;
+}
+
+/* Number before title. */
+.dipl-table-of-contents-content sectionnum{
+	margin-right: 8px;
+	color: #000000;
+}
+
+/* Sub-TOC (H3) indented */
+.dipl-table-of-contents-content tocsecentry tableofcontents{
+	display: block;
+	margin-left: 1rem;
+}
+
+/* Link styling */
+.dipl-table-of-contents-content sectionsubject{
+	cursor: pointer;
+	color: #0073aa;
+}

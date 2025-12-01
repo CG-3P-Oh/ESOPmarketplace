@@ -1,0 +1,181 @@
+[10-Nov-2025 15:57:41 UTC] PHP Warning:  require(/home/esopmark/new.esopmarketplace.com/wp-includes/version.php): Failed to open stream: No such file or directory in /home/esopmark/new.esopmarketplace.com/wp-settings.php on line 34
+[10-Nov-2025 15:57:41 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/esopmark/new.esopmarketplace.com/wp-includes/version.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/esopmark/new.esopmarketplace.com/wp-settings.php:34
+Stack trace:
+#0 /home/esopmark/new.esopmarketplace.com/wp-config.php(102): require_once()
+#1 /home/esopmark/new.esopmarketplace.com/wp-load.php(50): require_once('/home/esopmark/...')
+#2 /home/esopmark/new.esopmarketplace.com/wp-blog-header.php(13): require_once('/home/esopmark/...')
+#3 /home/esopmark/new.esopmarketplace.com/index.php(17): require('/home/esopmark/...')
+#4 {main}
+  thrown in /home/esopmark/new.esopmarketplace.com/wp-settings.php on line 34
+[10-Nov-2025 15:58:03 UTC] PHP Warning:  require(/home/esopmark/new.esopmarketplace.com/wp-includes/version.php): Failed to open stream: No such file or directory in /home/esopmark/new.esopmarketplace.com/wp-settings.php on line 34
+[10-Nov-2025 15:58:03 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/esopmark/new.esopmarketplace.com/wp-includes/version.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/esopmark/new.esopmarketplace.com/wp-settings.php:34
+Stack trace:
+#0 /home/esopmark/new.esopmarketplace.com/wp-config.php(102): require_once()
+#1 /home/esopmark/new.esopmarketplace.com/wp-load.php(50): require_once('/home/esopmark/...')
+#2 /home/esopmark/new.esopmarketplace.com/wp-blog-header.php(13): require_once('/home/esopmark/...')
+#3 /home/esopmark/new.esopmarketplace.com/index.php(17): require('/home/esopmark/...')
+#4 {main}
+  thrown in /home/esopmark/new.esopmarketplace.com/wp-settings.php on line 34
+[10-Nov-2025 16:09:15 UTC] PHP Warning:  require(/home/esopmark/new.esopmarketplace.com/wp-includes/version.php): Failed to open stream: No such file or directory in /home/esopmark/new.esopmarketplace.com/wp-settings.php on line 34
+[10-Nov-2025 16:09:15 UTC] PHP Warning:  require(/home/esopmark/new.esopmarketplace.com/wp-includes/version.php): Failed to open stream: No such file or directory in /home/esopmark/new.esopmarketplace.com/wp-settings.php on line 34
+[10-Nov-2025 16:09:15 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/esopmark/new.esopmarketplace.com/wp-includes/version.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/esopmark/new.esopmarketplace.com/wp-settings.php:34
+Stack trace:
+#0 /home/esopmark/new.esopmarketplace.com/wp-config.php(102): require_once()
+#1 /home/esopmark/new.esopmarketplace.com/wp-load.php(50): require_once('/home/esopmark/...')
+#2 /home/esopmark/new.esopmarketplace.com/wp-blog-header.php(13): require_once('/home/esopmark/...')
+#3 /home/esopmark/new.esopmarketplace.com/index.php(17): require('/home/esopmark/...')
+#4 {main}
+  thrown in /home/esopmark/new.esopmarketplace.com/wp-settings.php on line 34
+[10-Nov-2025 16:09:15 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/esopmark/new.esopmarketplace.com/wp-includes/version.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/esopmark/new.esopmarketplace.com/wp-settings.php:34
+Stack trace:
+#0 /home/esopmark/new.esopmarketplace.com/wp-config.php(102): require_once()
+#1 /home/esopmark/new.esopmarketplace.com/wp-load.php(50): require_once('/home/esopmark/...')
+#2 /home/esopmark/new.esopmarketplace.com/wp-blog-header.php(13): require_once('/home/esopmark/...')
+#3 /home/esopmark/new.esopmarketplace.com/index.php(17): require('/home/esopmark/...')
+#4 {main}
+  thrown in /home/esopmark/new.esopmarketplace.com/wp-settings.php on line 34
+[10-Nov-2025 16:09:32 UTC] PHP Warning:  require(/home/esopmark/new.esopmarketplace.com/wp-includes/version.php): Failed to open stream: No such file or directory in /home/esopmark/new.esopmarketplace.com/wp-settings.php on line 34
+[10-Nov-2025 16:09:32 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/esopmark/new.esopmarketplace.com/wp-includes/version.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/esopmark/new.esopmarketplace.com/wp-settings.php:34
+Stack trace:
+#0 /home/esopmark/new.esopmarketplace.com/wp-config.php(102): require_once()
+#1 /home/esopmark/new.esopmarketplace.com/wp-load.php(50): require_once('/home/esopmark/...')
+#2 /home/esopmark/new.esopmarketplace.com/wp-blog-header.php(13): require_once('/home/esopmark/...')
+#3 /home/esopmark/new.esopmarketplace.com/index.php(17): require('/home/esopmark/...')
+#4 {main}
+  thrown in /home/esopmark/new.esopmarketplace.com/wp-settings.php on line 34
+[10-Nov-2025 16:10:44 UTC] PHP Warning:  require(/home/esopmark/new.esopmarketplace.com/wp-includes/version.php): Failed to open stream: No such file or directory in /home/esopmark/new.esopmarketplace.com/wp-settings.php on line 34
+[10-Nov-2025 16:10:44 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/esopmark/new.esopmarketplace.com/wp-includes/version.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/esopmark/new.esopmarketplace.com/wp-settings.php:34
+Stack trace:
+#0 /home/esopmark/new.esopmarketplace.com/wp-config.php(102): require_once()
+#1 /home/esopmark/new.esopmarketplace.com/wp-load.php(50): require_once('/home/esopmark/...')
+#2 /home/esopmark/new.esopmarketplace.com/wp-blog-header.php(13): require_once('/home/esopmark/...')
+#3 /home/esopmark/new.esopmarketplace.com/index.php(17): require('/home/esopmark/...')
+#4 {main}
+  thrown in /home/esopmark/new.esopmarketplace.com/wp-settings.php on line 34
+[10-Nov-2025 16:11:05 UTC] PHP Warning:  require(/home/esopmark/new.esopmarketplace.com/wp-includes/version.php): Failed to open stream: No such file or directory in /home/esopmark/new.esopmarketplace.com/wp-settings.php on line 34
+[10-Nov-2025 16:11:05 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/esopmark/new.esopmarketplace.com/wp-includes/version.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/esopmark/new.esopmarketplace.com/wp-settings.php:34
+Stack trace:
+#0 /home/esopmark/new.esopmarketplace.com/wp-config.php(102): require_once()
+#1 /home/esopmark/new.esopmarketplace.com/wp-load.php(50): require_once('/home/esopmark/...')
+#2 /home/esopmark/new.esopmarketplace.com/wp-blog-header.php(13): require_once('/home/esopmark/...')
+#3 /home/esopmark/new.esopmarketplace.com/index.php(17): require('/home/esopmark/...')
+#4 {main}
+  thrown in /home/esopmark/new.esopmarketplace.com/wp-settings.php on line 34
+[10-Nov-2025 16:15:37 UTC] PHP Warning:  require(/home/esopmark/new.esopmarketplace.com/wp-includes/version.php): Failed to open stream: No such file or directory in /home/esopmark/new.esopmarketplace.com/wp-settings.php on line 34
+[10-Nov-2025 16:15:37 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/esopmark/new.esopmarketplace.com/wp-includes/version.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/esopmark/new.esopmarketplace.com/wp-settings.php:34
+Stack trace:
+#0 /home/esopmark/new.esopmarketplace.com/wp-config.php(102): require_once()
+#1 /home/esopmark/new.esopmarketplace.com/wp-load.php(50): require_once('/home/esopmark/...')
+#2 /home/esopmark/new.esopmarketplace.com/wp-blog-header.php(13): require_once('/home/esopmark/...')
+#3 /home/esopmark/new.esopmarketplace.com/index.php(17): require('/home/esopmark/...')
+#4 {main}
+  thrown in /home/esopmark/new.esopmarketplace.com/wp-settings.php on line 34
+[10-Nov-2025 16:21:10 UTC] PHP Warning:  require(/home/esopmark/new.esopmarketplace.com/wp-includes/version.php): Failed to open stream: No such file or directory in /home/esopmark/new.esopmarketplace.com/wp-settings.php on line 34
+[10-Nov-2025 16:21:10 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/esopmark/new.esopmarketplace.com/wp-includes/version.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/esopmark/new.esopmarketplace.com/wp-settings.php:34
+Stack trace:
+#0 /home/esopmark/new.esopmarketplace.com/wp-config.php(102): require_once()
+#1 /home/esopmark/new.esopmarketplace.com/wp-load.php(50): require_once('/home/esopmark/...')
+#2 /home/esopmark/new.esopmarketplace.com/wp-blog-header.php(13): require_once('/home/esopmark/...')
+#3 /home/esopmark/new.esopmarketplace.com/index.php(17): require('/home/esopmark/...')
+#4 {main}
+  thrown in /home/esopmark/new.esopmarketplace.com/wp-settings.php on line 34
+[11-Nov-2025 19:33:47 UTC] Cron reschedule event error for hook: action_scheduler_run_queue, Error code: invalid_schedule, Error message: Event schedule does not exist., Data: {"schedule":"every_minute","args":["WP Cron"],"interval":60}
+[11-Nov-2025 19:33:47 UTC] Cron reschedule event error for hook: litespeed_task_ccss, Error code: invalid_schedule, Error message: Event schedule does not exist., Data: {"schedule":"litespeed_filter","args":[],"interval":60}
+[11-Nov-2025 19:33:47 UTC] Cron reschedule event error for hook: litespeed_task_ucss, Error code: invalid_schedule, Error message: Event schedule does not exist., Data: {"schedule":"litespeed_filter","args":[],"interval":60}
+[11-Nov-2025 19:33:47 UTC] Cron reschedule event error for hook: litespeed_task_lqip, Error code: invalid_schedule, Error message: Event schedule does not exist., Data: {"schedule":"litespeed_filter","args":[],"interval":60}
+[11-Nov-2025 19:33:47 UTC] Cron reschedule event error for hook: litespeed_task_imgoptm_req, Error code: invalid_schedule, Error message: Event schedule does not exist., Data: {"schedule":"litespeed_filter","args":[],"interval":60}
+[11-Nov-2025 19:33:47 UTC] Cron reschedule event error for hook: litespeed_task_avatar, Error code: invalid_schedule, Error message: Event schedule does not exist., Data: {"schedule":"litespeed_filter","args":[],"interval":60}
+[11-Nov-2025 19:40:31 UTC] Cron reschedule event error for hook: action_scheduler_run_queue, Error code: invalid_schedule, Error message: Event schedule does not exist., Data: {"schedule":"every_minute","args":["WP Cron"],"interval":60}
+[12-Nov-2025 20:49:25 UTC] PHP Fatal error:  Uncaught TypeError: trim(): Argument #1 ($string) must be of type string, array given in /home/esopmark/new.esopmarketplace.com/wp-content/themes/divi-child/functions.php:15
+Stack trace:
+#0 /home/esopmark/new.esopmarketplace.com/wp-content/themes/divi-child/functions.php(15): trim(Array)
+#1 /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-hook.php(324): {closure}(Array, 'et_pb_social_me...', Object(ET_Builder_Module_Social_Media_Follow_Item))
+#2 /home/esopmark/new.esopmarketplace.com/wp-includes/plugin.php(205): WP_Hook->apply_filters(Array, Array)
+#3 /home/esopmark/new.esopmarketplace.com/wp-content/themes/Divi/includes/builder/class-et-builder-element.php(3471): apply_filters('et_module_short...', Array, 'et_pb_social_me...', Object(ET_Builder_Module_Social_Media_Follow_Item))
+#4 /home/esopmark/new.esopmarketplace.com/wp-content/themes/Divi/includes/builder/functions.php(11571): ET_Builder_Element->_render(Array, 'facebook', 'et_pb_social_me...', '0.0.0.1', '', 'et_pb_row', 'et_pb_social_me...', '')
+#5 /home/esopmark/new.esopmarketplace.com/wp-content/themes/Divi/includes/builder/class-et-builder-element.php(4045): et_fb_process_shortcode(3, '0.0.0.1', '', 'et_pb_row', 'et_pb_social_me...')
+#6 /home/esopmark/new.esopmarketplace.com/wp-content/themes/Divi/includes/builder/class-et-builder-element.php(3441): ET_Builder_Element->render_as_builder_data(Array, '[et_pb_social_m...', 'et_pb_social_me...', '0.0.0', '', 'et_pb_row', 'et_pb_social_me...', '')
+#7 /home/esopmark/new.esopmarketplace.com/wp-content/themes/Divi/includes/builder/functions.php(11571): ET_Builder_Element->_render(Array, '[et_pb_social_m...', 'et_pb_social_me...', '0.0.0', '', 'et_pb_row', 'et_pb_column', '')
+#8 /home/esopmark/new.esopmarketplace.com/wp-content/themes/Divi/includes/builder/class-et-builder-element.php(4045): et_fb_process_shortcode(2, '0.0.0', '', 'et_pb_row', 'et_pb_column')
+#9 /home/esopmark/new.esopmarketplace.com/wp-content/themes/Divi/includes/builder/class-et-builder-element.php(3441): ET_Builder_Element->render_as_builder_data(Array, '[et_pb_image sr...', 'et_pb_column', '0.0', '', 'et_pb_row', 'et_pb_column', '')
+#10 /home/esopmark/new.esopmarketplace.com/wp-content/themes/Divi/includes/builder/functions.php(11571): ET_Builder_Element->_render(Array, '[et_pb_image sr...', 'et_pb_column', '0.0', '', 'et_pb_row', 'et_pb_row', '')
+#11 /home/esopmark/new.esopmarketplace.com/wp-content/themes/Divi/includes/builder/class-et-builder-element.php(4045): et_fb_process_shortcode(3, '0.0', '', 'et_pb_row', 'et_pb_row')
+#12 /home/esopmark/new.esopmarketplace.com/wp-content/themes/Divi/includes/builder/class-et-builder-element.php(3441): ET_Builder_Element->render_as_builder_data(Array, '[et_pb_column t...', 'et_pb_row', '0', '', 'et_pb_row', 'et_pb_row', '')
+#13 /home/esopmark/new.esopmarketplace.com/wp-content/themes/Divi/includes/builder/functions.php(11571): ET_Builder_Element->_render(Array, '[et_pb_column t...', 'et_pb_row', '0', '', 'et_pb_row', 'et_pb_section', '')
+#14 /home/esopmark/new.esopmarketplace.com/wp-content/themes/Divi/includes/builder/class-et-builder-element.php(4045): et_fb_process_shortcode(1, '0', '', 'et_pb_row', 'et_pb_section')
+#15 /home/esopmark/new.esopmarketplace.com/wp-content/themes/Divi/includes/builder/class-et-builder-element.php(3441): ET_Builder_Element->render_as_builder_data(Array, '[et_pb_row colu...', 'et_pb_section', '', '', 'et_pb_section', 'et_pb_section', '')
+#16 /home/esopmark/new.esopmarketplace.com/wp-content/themes/Divi/includes/builder/functions.php(11571): ET_Builder_Element->_render(Array, '[et_pb_row colu...', 'et_pb_section', '', '', 'et_pb_section', '', '')
+#17 /home/esopmark/new.esopmarketplace.com/wp-content/themes/Divi/includes/builder/functions.php(11014): et_fb_process_shortcode(2)
+#18 /home/esopmark/new.esopmarketplace.com/wp-content/themes/Divi/includes/builder/frontend-builder/helpers.php(2935): et_fb_get_builder_shortcode_object('et_footer_layou...', 110, '')
+#19 /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-hook.php(324): et_fb_backend_helpers('')
+#20 /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#21 /home/esopmark/new.esopmarketplace.com/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#22 /home/esopmark/new.esopmarketplace.com/wp-content/themes/Divi/includes/builder/frontend-builder/assets.php(350): do_action('et_fb_enqueue_a...')
+#23 /home/esopmark/new.esopmarketplace.com/wp-content/themes/Divi/includes/builder/frontend-builder/view.php(119): et_fb_enqueue_assets()
+#24 /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-hook.php(324): et_fb_wp_footer('')
+#25 /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#26 /home/esopmark/new.esopmarketplace.com/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#27 /home/esopmark/new.esopmarketplace.com/wp-includes/general-template.php(3208): do_action('wp_footer')
+#28 /home/esopmark/new.esopmarketplace.com/wp-content/themes/Divi/includes/builder/frontend-builder/theme-builder/frontend-footer-template.php(15): wp_footer()
+#29 /home/esopmark/new.esopmarketplace.com/wp-content/themes/Divi/includes/builder/frontend-builder/theme-builder/frontend.php(216): require_once('/home/esopmark/...')
+#30 /home/esopmark/new.esopmarketplace.com/wp-content/themes/Divi/includes/builder/frontend-builder/theme-builder/frontend.php(260): et_theme_builder_frontend_override_partial('footer', '', 'wp_footer')
+#31 /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-hook.php(326): et_theme_builder_frontend_override_footer(NULL)
+#32 /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#33 /home/esopmark/new.esopmarketplace.com/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#34 /home/esopmark/new.esopmarketplace.com/wp-includes/general-template.php(82): do_action('get_footer', NULL, Array)
+#35 /home/esopmark/new.esopmarketplace.com/wp-content/themes/Divi/includes/builder/frontend-builder/theme-builder/frontend-body-template.php(15): get_footer()
+#36 /home/esopmark/new.esopmarketplace.com/wp-includes/template-loader.php(106): include('/home/esopmark/...')
+#37 /home/esopmark/new.esopmarketplace.com/wp-blog-header.php(19): require_once('/home/esopmark/...')
+#38 /home/esopmark/new.esopmarketplace.com/index.php(17): require('/home/esopmark/...')
+#39 {main}
+  thrown in /home/esopmark/new.esopmarketplace.com/wp-content/themes/divi-child/functions.php on line 15
+[12-Nov-2025 20:50:00 UTC] PHP Fatal error:  Uncaught TypeError: trim(): Argument #1 ($string) must be of type string, array given in /home/esopmark/new.esopmarketplace.com/wp-content/themes/divi-child/functions.php:15
+Stack trace:
+#0 /home/esopmark/new.esopmarketplace.com/wp-content/themes/divi-child/functions.php(15): trim(Array)
+#1 /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-hook.php(324): {closure}(Array, 'et_pb_social_me...', Object(ET_Builder_Module_Social_Media_Follow_Item))
+#2 /home/esopmark/new.esopmarketplace.com/wp-includes/plugin.php(205): WP_Hook->apply_filters(Array, Array)
+#3 /home/esopmark/new.esopmarketplace.com/wp-content/themes/Divi/includes/builder/class-et-builder-element.php(3471): apply_filters('et_module_short...', Array, 'et_pb_social_me...', Object(ET_Builder_Module_Social_Media_Follow_Item))
+#4 /home/esopmark/new.esopmarketplace.com/wp-content/themes/Divi/includes/builder/functions.php(11571): ET_Builder_Element->_render(Array, 'facebook', 'et_pb_social_me...', '0.0.0.1', '', 'et_pb_row', 'et_pb_social_me...', '')
+#5 /home/esopmark/new.esopmarketplace.com/wp-content/themes/Divi/includes/builder/class-et-builder-element.php(4045): et_fb_process_shortcode(3, '0.0.0.1', '', 'et_pb_row', 'et_pb_social_me...')
+#6 /home/esopmark/new.esopmarketplace.com/wp-content/themes/Divi/includes/builder/class-et-builder-element.php(3441): ET_Builder_Element->render_as_builder_data(Array, '[et_pb_social_m...', 'et_pb_social_me...', '0.0.0', '', 'et_pb_row', 'et_pb_social_me...', '')
+#7 /home/esopmark/new.esopmarketplace.com/wp-content/themes/Divi/includes/builder/functions.php(11571): ET_Builder_Element->_render(Array, '[et_pb_social_m...', 'et_pb_social_me...', '0.0.0', '', 'et_pb_row', 'et_pb_column', '')
+#8 /home/esopmark/new.esopmarketplace.com/wp-content/themes/Divi/includes/builder/class-et-builder-element.php(4045): et_fb_process_shortcode(2, '0.0.0', '', 'et_pb_row', 'et_pb_column')
+#9 /home/esopmark/new.esopmarketplace.com/wp-content/themes/Divi/includes/builder/class-et-builder-element.php(3441): ET_Builder_Element->render_as_builder_data(Array, '[et_pb_image sr...', 'et_pb_column', '0.0', '', 'et_pb_row', 'et_pb_column', '')
+#10 /home/esopmark/new.esopmarketplace.com/wp-content/themes/Divi/includes/builder/functions.php(11571): ET_Builder_Element->_render(Array, '[et_pb_image sr...', 'et_pb_column', '0.0', '', 'et_pb_row', 'et_pb_row', '')
+#11 /home/esopmark/new.esopmarketplace.com/wp-content/themes/Divi/includes/builder/class-et-builder-element.php(4045): et_fb_process_shortcode(3, '0.0', '', 'et_pb_row', 'et_pb_row')
+#12 /home/esopmark/new.esopmarketplace.com/wp-content/themes/Divi/includes/builder/class-et-builder-element.php(3441): ET_Builder_Element->render_as_builder_data(Array, '[et_pb_column t...', 'et_pb_row', '0', '', 'et_pb_row', 'et_pb_row', '')
+#13 /home/esopmark/new.esopmarketplace.com/wp-content/themes/Divi/includes/builder/functions.php(11571): ET_Builder_Element->_render(Array, '[et_pb_column t...', 'et_pb_row', '0', '', 'et_pb_row', 'et_pb_section', '')
+#14 /home/esopmark/new.esopmarketplace.com/wp-content/themes/Divi/includes/builder/class-et-builder-element.php(4045): et_fb_process_shortcode(1, '0', '', 'et_pb_row', 'et_pb_section')
+#15 /home/esopmark/new.esopmarketplace.com/wp-content/themes/Divi/includes/builder/class-et-builder-element.php(3441): ET_Builder_Element->render_as_builder_data(Array, '[et_pb_row colu...', 'et_pb_section', '', '', 'et_pb_section', 'et_pb_section', '')
+#16 /home/esopmark/new.esopmarketplace.com/wp-content/themes/Divi/includes/builder/functions.php(11571): ET_Builder_Element->_render(Array, '[et_pb_row colu...', 'et_pb_section', '', '', 'et_pb_section', '', '')
+#17 /home/esopmark/new.esopmarketplace.com/wp-content/themes/Divi/includes/builder/functions.php(11014): et_fb_process_shortcode(2)
+#18 /home/esopmark/new.esopmarketplace.com/wp-content/themes/Divi/includes/builder/frontend-builder/helpers.php(2935): et_fb_get_builder_shortcode_object('et_footer_layou...', 110, '')
+#19 /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-hook.php(324): et_fb_backend_helpers('')
+#20 /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#21 /home/esopmark/new.esopmarketplace.com/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#22 /home/esopmark/new.esopmarketplace.com/wp-content/themes/Divi/includes/builder/frontend-builder/assets.php(350): do_action('et_fb_enqueue_a...')
+#23 /home/esopmark/new.esopmarketplace.com/wp-content/themes/Divi/includes/builder/frontend-builder/view.php(119): et_fb_enqueue_assets()
+#24 /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-hook.php(324): et_fb_wp_footer('')
+#25 /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#26 /home/esopmark/new.esopmarketplace.com/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#27 /home/esopmark/new.esopmarketplace.com/wp-includes/general-template.php(3208): do_action('wp_footer')
+#28 /home/esopmark/new.esopmarketplace.com/wp-content/themes/Divi/includes/builder/frontend-builder/theme-builder/frontend-footer-template.php(15): wp_footer()
+#29 /home/esopmark/new.esopmarketplace.com/wp-content/themes/Divi/includes/builder/frontend-builder/theme-builder/frontend.php(216): require_once('/home/esopmark/...')
+#30 /home/esopmark/new.esopmarketplace.com/wp-content/themes/Divi/includes/builder/frontend-builder/theme-builder/frontend.php(260): et_theme_builder_frontend_override_partial('footer', '', 'wp_footer')
+#31 /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-hook.php(326): et_theme_builder_frontend_override_footer(NULL)
+#32 /home/esopmark/new.esopmarketplace.com/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#33 /home/esopmark/new.esopmarketplace.com/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#34 /home/esopmark/new.esopmarketplace.com/wp-includes/general-template.php(82): do_action('get_footer', NULL, Array)
+#35 /home/esopmark/new.esopmarketplace.com/wp-content/themes/Divi/includes/builder/frontend-builder/theme-builder/frontend-body-template.php(15): get_footer()
+#36 /home/esopmark/new.esopmarketplace.com/wp-includes/template-loader.php(106): include('/home/esopmark/...')
+#37 /home/esopmark/new.esopmarketplace.com/wp-blog-header.php(19): require_once('/home/esopmark/...')
+#38 /home/esopmark/new.esopmarketplace.com/index.php(17): require('/home/esopmark/...')
+#39 {main}
+  thrown in /home/esopmark/new.esopmarketplace.com/wp-content/themes/divi-child/functions.php on line 15
+[20-Nov-2025 20:12:09 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function wp_create_category() in /home/esopmark/new.esopmarketplace.com/import-cake-articles.php:20
+Stack trace:
+#0 {main}
+  thrown in /home/esopmark/new.esopmarketplace.com/import-cake-articles.php on line 20
+[20-Nov-2025 20:21:03 UTC] PHP Parse error:  syntax error, unexpected end of file, expecting variable or "${" or "{$" in /home/esopmark/new.esopmarketplace.com/import-cake-articles.php on line 159
+[24-Nov-2025 07:30:34 UTC] Cron unschedule event error for hook: wordfence_start_scheduled_scan, Error code: could_not_set, Error message: The cron event list could not be saved., Data: {"schedule":false,"args":[1763954504]}
+[25-Nov-2025 16:41:35 UTC] PHP Warning:  Attempt to read property "post_content" on null in /home/esopmark/new.esopmarketplace.com/wp-content/themes/divi-child/functions.php on line 89

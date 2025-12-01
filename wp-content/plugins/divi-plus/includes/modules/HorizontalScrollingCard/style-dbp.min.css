@@ -1,0 +1,133 @@
+/* Sticky Cards Grid Container */
+.et_divi_builder #et_builder_outer_content .dipl_horizontal_scrolling_card,
+.et_divi_builder #et_builder_outer_content .dipl-sticky-cards-scroller{
+	position: relative;
+	overflow: hidden;
+}
+.et_divi_builder #et_builder_outer_content .dipl-sticky-cards-scroller{
+	background-size: cover;
+	background-position: 50%;
+	background-repeat: no-repeat;
+}
+.et_divi_builder #et_builder_outer_content .dipl-sticky-cards-wrapper{
+	position: relative;
+}
+.et_divi_builder #et_builder_outer_content .dipl-sticky-cards-inner{
+	display: flex; 
+	overflow: visible; 
+}
+
+.et_divi_builder #et_builder_outer_content .dipl_horizontal_scrolling_card .dipl-sticky-cards-wrapper .dipl_horizontal_scrolling_card_item{
+	flex-shrink: 0;
+	margin-bottom: 0;
+}
+.et_divi_builder #et_builder_outer_content .dipl_horizontal_scrolling_card_item .et_pb_module_inner,
+.et_divi_builder #et_builder_outer_content .dipl_horizontal_scrolling_card_item > div{
+	height: 100%;
+}
+.et_divi_builder #et_builder_outer_content .dipl_horizontal_scrolling_card_wrapper{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	width: 300px;
+	min-width: 300px;
+	margin-right: 20px; /* this should be coming from the module */ 
+	padding: 20px;
+	font-size: 2rem;
+	background-color: #f0f0f0;
+	border: 0 solid #000;
+}
+.et_divi_builder #et_builder_outer_content .dipl_horizontal_scrolling_card_item:last-child .dipl_horizontal_scrolling_card_wrapper{
+	margin-right: 0;
+}
+
+.et_divi_builder #et_builder_outer_content .dipl_horizontal_scrolling_card_inner::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.28);
+	transition: all .3s ease-in-out;
+}
+.et_divi_builder #et_builder_outer_content .dipl_horizontal_scrolling_card_image_wrapper{
+	position: relative;
+	width: 100%;
+}
+.et_divi_builder #et_builder_outer_content .dipl_horizontal_scrolling_card_image{
+	width: 100%;
+	max-width: 100%;
+	object-fit: cover;
+	border: 0 solid #000;
+}
+.et_divi_builder #et_builder_outer_content .dipl_horizontal_scrolling_card_content_wrapper{
+	width: 100%;
+	border: 0 solid #000;
+}
+.et_divi_builder #et_builder_outer_content .dipl_horizontal_scrolling_card_title{
+	margin-top: 15px;
+}
+.et_divi_builder #et_builder_outer_content .dipl_horizontal_scrolling_card_description{
+	font-size: 16px;
+	line-height: 1.2em;
+}
+
+/* Tag. */
+.et_divi_builder #et_builder_outer_content .dipl_horizontal_scrolling_card_tag_wrapper .dipl_horizontal_scrolling_card_tag{
+	display: inline-block;
+	padding: 5px;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 1.2;
+	color: #fff;
+	background-color: #000;
+}
+
+/* Button. */
+.et_divi_builder #et_builder_outer_content .dipl_horizontal_scrolling_card_wrapper .et_pb_button_wrapper{
+	margin-top: 15px;
+}
+.et_divi_builder #et_builder_outer_content .dipl_horizontal_scrolling_card_wrapper .et_pb_button{
+	display: inline-block;
+}
+.et_divi_builder #et_builder_outer_content .dipl_horizontal_scrolling_card_item .et_pb_button:before,
+.et_divi_builder #et_builder_outer_content .dipl_horizontal_scrolling_card_item .et_pb_button:after{
+	content: attr(data-icon);
+}
+
+/* Layout 1 Specific. */
+.et_divi_builder #et_builder_outer_content .dipl_horizontal_scrolling_card .layout1 .dipl_horizontal_scrolling_card_image_wrapper .dipl_horizontal_scrolling_card_tag_wrapper{
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	z-index: 2;
+}
+.et_divi_builder #et_builder_outer_content .dipl_horizontal_scrolling_card .layout1 .dipl_horizontal_scrolling_card_content_wrapper{
+	flex-grow: 1;
+}
+
+/* Layout 2 Specific. */
+.et_divi_builder #et_builder_outer_content .dipl_horizontal_scrolling_card .layout2 .dipl_horizontal_scrolling_card_wrapper{
+	min-height: 500px;
+	padding: 0px;
+}
+.et_divi_builder #et_builder_outer_content .dipl_horizontal_scrolling_card .layout2 .dipl_horizontal_scrolling_card_inner{
+	display: flex;
+	align-items: flex-end;
+	height: 100%;
+	min-width: 100%;
+	background-size: cover;
+	background-position: center;
+	padding: 20px;
+}
+.et_divi_builder #et_builder_outer_content .dipl_horizontal_scrolling_card .layout2 .dipl_horizontal_scrolling_card_content_wrapper{
+	position: relative;
+	color: #fff;
+}
+.et_divi_builder #et_builder_outer_content .dipl_horizontal_scrolling_card .layout2 .dipl_horizontal_scrolling_card_tag_wrapper{
+	position: relative;
+}

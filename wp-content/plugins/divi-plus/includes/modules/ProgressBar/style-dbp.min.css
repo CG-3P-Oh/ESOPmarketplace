@@ -1,0 +1,143 @@
+.et_divi_builder #et_builder_outer_content .dipl_progress_bar_wrapper{
+	background-color: #eeeeee;
+	overflow: hidden;
+	z-index: 9999;
+}
+.et_divi_builder #et_builder_outer_content .dipl_progress_bar_percent{
+	padding: 5px;
+	font-size: 12px;
+}
+
+/* Bar layout. */
+.et_divi_builder #et_builder_outer_content .dipl_progress_bar_layout_bar{
+	position: relative;
+	height: 30px;
+	width: 100%;
+	border-radius: 50px;
+	border: 0 solid #000000;
+}
+.et_divi_builder #et_builder_outer_content .dipl_progress_bar_layout_bar .dipl_progress_bar_inner{
+	background-color: #007bff;
+	transition: width 0.1s ease-out, height 0.1s ease-out;
+	width: 0%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	inset: 0;
+	color: white;
+	font-weight: bold;
+	font-family: sans-serif;
+	overflow: hidden;
+	flex-direction: row;
+}
+.et_divi_builder #et_builder_outer_content .dipl_progress_bar_striped .dipl_progress_bar_inner{
+	background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+	background-size: 40px 40px;
+	animation: dipl-stripe-slide 1s linear infinite;
+}
+@keyframes dipl-stripe-slide {
+	from { background-position: 40px 0; }
+	to { background-position: 0 0; }
+}
+/* Bar verticle. */
+.et_divi_builder #et_builder_outer_content .dipl_progress_bar_wrapper[data-bar_direction="vertical"]{
+	width: 30px;
+	height: 500px;
+}
+.et_divi_builder #et_builder_outer_content .dipl_progress_bar_wrapper[data-bar_direction="vertical"] .dipl_progress_bar_percent{
+	writing-mode: sideways-lr;
+}
+
+/* Circle layout. */
+.et_divi_builder #et_builder_outer_content .dipl_progress_bar_layout_circle{
+	width: 150px;
+	position: relative;
+	background: none;
+}
+.et_divi_builder #et_builder_outer_content .dipl_progress_bar_layout_circle .dipl_progress_bar_inner{
+	width: 100% !important;
+}
+.et_divi_builder #et_builder_outer_content .dipl_progress_bar_layout_circle .dipl_progress_bar_percent{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 16px;
+	font-weight: bold;
+	color: #fff;
+	font-family: sans-serif;
+	z-index: 2;
+}
+.et_divi_builder #et_builder_outer_content .dipl_progress_bar_layout_circle svg.dipl_progress_bar_circle{
+	width: 100%;
+	height: 100%;
+	transform: rotate(-90deg);
+}
+.et_divi_builder #et_builder_outer_content .dipl_progress_bar_layout_circle svg circle{
+    fill: none;
+    stroke-width: 10;
+    cx: 50;
+    cy: 50;
+    r: 45;
+}
+.et_divi_builder #et_builder_outer_content .dipl_progress_bar_layout_circle svg circle.dipl_fill_progress_bar_bg{
+	fill: #131313;
+	stroke: none;
+}
+.et_divi_builder #et_builder_outer_content .dipl_progress_bar_layout_circle svg circle.dipl_circle_bg{
+	fill: none;
+	stroke: #eee;
+	stroke-width: 8;
+}
+.et_divi_builder #et_builder_outer_content .dipl_progress_bar_layout_circle svg circle.dipl_circle_fg{
+	fill: none;
+	stroke: #007bff;
+	stroke-linecap: round;
+	stroke-width: 8;
+	stroke-dasharray: 282.6;
+	stroke-dashoffset: 282.6;
+}
+
+/* Half-Circle Layout. */
+.et_divi_builder #et_builder_outer_content .dipl_progress_bar_layout_half_circle{
+	width: 150px;
+	position: relative;
+	background: none;
+	z-index: 9999;
+}
+.et_divi_builder #et_builder_outer_content .dipl_progress_bar_layout_half_circle .dipl_progress_bar_inner{
+	position: relative;
+	width: 100% !important;
+}
+.et_divi_builder #et_builder_outer_content .dipl_progress_bar_layout_half_circle svg.dipl_half_circle{
+	display: block;
+	width: 100%;
+	height: 100%;
+	transform: rotate(0deg);
+}
+.et_divi_builder #et_builder_outer_content .dipl_progress_bar_layout_half_circle svg .dipl_circle_bg{
+	fill: #131313;
+	stroke: #e9ecef;
+	stroke-width: 12;
+}
+.et_divi_builder #et_builder_outer_content .dipl_progress_bar_layout_half_circle svg .dipl_circle_fg{
+	fill: none;
+	stroke: #007bff;
+	stroke-width: 12;
+	stroke-linecap: square;
+	stroke-dasharray: 282.74;
+	stroke-dashoffset: 282.74;
+}
+.et_divi_builder #et_builder_outer_content .dipl_progress_bar_layout_half_circle .dipl_progress_bar_percent{
+	position: absolute;
+	top: 70%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-family: sans-serif;
+	font-weight: bold;
+	font-size: 16px;
+	color: #ffffff;
+	pointer-events: none;
+}

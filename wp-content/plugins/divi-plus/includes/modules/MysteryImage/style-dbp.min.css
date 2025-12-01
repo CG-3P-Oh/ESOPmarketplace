@@ -1,0 +1,17 @@
+.et_divi_builder #et_builder_outer_content .dipl_mystery_image_wrap{
+	display: inline-block;
+	position: relative;
+	max-width: 100%;
+	border: 0px solid #000;
+}
+.et_divi_builder #et_builder_outer_content .dipl_mystery_image_wrap:hover .et_overlay{
+	z-index: 3;
+	opacity: 1;
+}
+.et_divi_builder #et_builder_outer_content .dipl_mystery_image_wrap img{
+	display: block;
+}
+
+.et_divi_builder #et_builder_outer_content .dipl_mystery_image_lightbox.mfp-ready{
+	opacity: 1;
+}

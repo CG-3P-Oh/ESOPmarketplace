@@ -1,0 +1,90 @@
+/* Tooltip. */
+.et_divi_builder #et_builder_outer_content .tippy-box:before {
+	position: absolute;
+}
+.et_divi_builder #et_builder_outer_content .tippy-box[data-placement="top"]:before,
+.et_divi_builder #et_builder_outer_content .tippy-box[data-placement="bottom"]:before{
+	left: 0;
+	width: 100%;
+	height: 15px;
+	background: inherit;
+}
+.et_divi_builder #et_builder_outer_content .tippy-box[data-placement="top"]:before{
+	bottom: -14px;
+	clip-path: polygon(
+		0 0,
+		100% 0,
+		100% calc(100% - 15px),
+		calc(50% + 15px) calc(100% - 15px),
+		50% 100%,
+		calc(50% - 15px) calc(100% - 15px),
+		0 calc(100% - 15px)
+	);
+}
+.et_divi_builder #et_builder_outer_content .tippy-box[data-placement="bottom"]:before{
+	top: -14px;
+	clip-path: polygon(
+		100% 15px,
+		calc(50% + 15px) 15px,
+		50% 0,
+		calc(50% - 15px) 15px,
+		0 15px,
+		0 100%,
+		100% 100%
+	);
+}
+.et_divi_builder #et_builder_outer_content .tippy-box[data-placement="left"]:before,
+.et_divi_builder #et_builder_outer_content .tippy-box[data-placement="right"]:before{
+	top: 0;
+	width: 15px;
+	height: 100%;
+	background: inherit;
+	box-sizing: border-box;
+}
+.et_divi_builder #et_builder_outer_content .tippy-box[data-placement="left"]:before{
+	right: -14px;
+	clip-path: polygon(
+		0 0,
+		calc(100% - 15px) 0,
+		calc(100% - 15px) calc(50% - 15px),
+		100% 50%,
+		calc(100% - 15px) calc(50% + 15px),
+		calc(100% - 15px) 100%,
+		0 100%
+	);
+}
+.et_divi_builder #et_builder_outer_content .tippy-box[data-placement="right"]:before{
+	left: -14px;
+	clip-path: polygon(
+		100% 0,
+		15px 0,
+		15px calc(50% - 15px),
+		0 50%,
+		15px calc(50% + 15px),
+		15px 100%,
+		100% 100%
+	);
+}
+
+/* Update tooltip default style. */
+.et_divi_builder #et_builder_outer_content .tippy-box[data-theme^=".dipl_advanced_tooltip_"] {
+	background-color: #000000;
+	border-radius: 10px;
+	/* box-shadow: 0px 2px 18px 0px rgba(0,0,0,0.3); */
+}
+.et_divi_builder #et_builder_outer_content .tippy-box[data-theme^=".dipl_advanced_tooltip_"] .tippy-content{
+	padding: 0;
+}
+
+/* Tooltip content. */
+.et_divi_builder #et_builder_outer_content .dipl_advanced_tooltip_content_wrap{
+	display: none;
+}
+.et_divi_builder #et_builder_outer_content .dipl_advanced_tooltip_content{
+	padding: 20px;
+	color: #ffffff;
+}
+.et_divi_builder #et_builder_outer_content .dipl_tooltip_trigger_icon,
+.et_divi_builder #et_builder_outer_content .dipl_tooltip_trigger_image{
+	cursor: pointer;
+}

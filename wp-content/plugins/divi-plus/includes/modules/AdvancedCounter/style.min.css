@@ -1,0 +1,52 @@
+.dipl_advanced_counter_title{
+	font-size: 32px;
+}
+.dipl_advanced_counter_number{
+	font-size: 50px;
+	font-weight: bold;
+	line-height: 1.2;
+	color: #000000;
+}
+.dipl_advanced_counter_description{
+	font-size: 18px;
+	margin-top: 10px;
+}
+.dipl_advanced_counter_image:not( .dipl-used-icon ) img{
+	max-width: 100%;
+	height: 90px;
+	object-fit: cover;
+	display: block;
+	border: 0px solid #000000;
+}
+.dipl_advanced_counter_image .et-pb-icon{
+	display: inline-block;
+	font-size: 70px;
+	border: 0px solid #000000;
+}
+
+/* Layout 1. */
+.dipl_advanced_counter_wrapper.layout1 .dipl_advanced_counter_image{
+	margin-bottom: 10px;
+}
+
+/* Layout 2. */
+.dipl_advanced_counter_wrapper.layout2 .dipl_advanced_counter_inner_top{
+	display: flex;
+	gap: 20px;
+	align-items: center;
+}
+.dipl_advanced_counter_wrapper.layout2 .dipl_advanced_counter_inner_content{
+	flex: 1;
+	flex-grow: 1;
+}
+
+/* Layout 3. */
+.dipl_advanced_counter_wrapper.layout3 .dipl_advanced_counter_inner_top{
+	display: flex;
+	gap: 20px;
+	align-items: center;
+}
+.dipl_advanced_counter_wrapper.layout3 .dipl_advanced_counter_title{
+	padding: 0;
+	margin: 0;
+}

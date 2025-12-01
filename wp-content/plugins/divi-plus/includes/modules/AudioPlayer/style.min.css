@@ -1,0 +1,240 @@
+.dipl_audio_player .layout1.dipl-audio-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
+    color: #2c3e50;
+    overflow: hidden;
+    transition: 0.3s;
+    flex-wrap: nowrap;
+    border-style: solid;
+}
+.dipl_audio_player .layout1.dipl-audio-card:hover {
+    box-shadow: 0 8px 35px rgba(0, 0, 0, 0.12);
+}
+.dipl_audio_player .layout1 .dipl-audio-info {
+    flex: 1;
+    padding-right: 30px;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.dipl_audio_player .layout1 .dipl-audio-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin: 0;
+    color: #000;
+}
+.dipl_audio_player .layout1 .dipl-audio-author {
+    color: #000;
+    font-size: 1rem;
+    margin: 5px 0 20px;
+}
+.dipl_audio_player .layout1 .jp-seek-bar {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+.dipl_audio_player .layout1 .jp-play-bar {
+    height: 100%;
+    background: #6c8faf;
+    width: 0%;
+    border-radius: 5px;
+}
+.dipl_audio_player .layout1 .dipl-audio-image {
+    flex-shrink: 0;
+    width: 280px;
+    margin-left: 30px;
+    display: flex;
+    align-items: center;
+}
+.dipl_audio_player .layout1 .dipl-audio-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 0 15px rgba(108, 143, 175, 0.3);
+}
+.dipl_audio_player .layout1 .jp-controls {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    flex-wrap: nowrap;
+}
+.dipl_audio_player .jp-mute,
+.dipl_audio_player .jp-play,
+.dipl_audio_player .jp-state-muted .jp-unmute,
+.dipl_audio_player .jp-state-playing .jp-pause {
+    display: flex;
+}
+.dipl_audio_player .jp-pause .et-pb-icon,
+.dipl_audio_player .jp-play .et-pb-icon {
+    font-family: FontAwesome !important;
+    font-weight: 900 !important;
+}
+.dipl_audio_player .jp-pause,
+.dipl_audio_player .jp-state-muted .jp-mute,
+.dipl_audio_player .jp-state-playing .jp-play,
+.dipl_audio_player .jp-unmute {
+    display: none;
+}
+.dipl_audio_player .jp-mute,
+.dipl_audio_player .jp-pause,
+.dipl_audio_player .jp-play,
+.dipl_audio_player .jp-unmute {
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+    padding: 0;
+    margin: 0;
+    line-height: 1;
+    box-sizing: border-box;
+}
+.dipl_audio_player .layout1 .jp-mute,
+.dipl_audio_player .layout1 .jp-pause,
+.dipl_audio_player .layout1 .jp-play,
+.dipl_audio_player .layout1 .jp-unmute {
+    background-color: #f8fbfd;
+    color: #6c8faf;
+    border: 2px solid #6c8faf;
+}
+.dipl_audio_player .layout1 .jp-mute:hover,
+.dipl_audio_player .layout1 .jp-pause:hover,
+.dipl_audio_player .layout1 .jp-play:hover,
+.dipl_audio_player .layout1 .jp-unmute:hover {
+    background-color: #6c8faf;
+    color: #fff;
+}
+.dipl_audio_player .layout1 .jp-mute span,
+.dipl_audio_player .layout1 .jp-pause span,
+.dipl_audio_player .layout1 .jp-play span,
+.dipl_audio_player .layout1 .jp-unmute span {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dipl_audio_player .layout1 .jp-progress {
+    flex-grow: 1;
+    height: 8px;
+    background: #e3ebf2;
+    border-radius: 4px;
+}
+.dipl_audio_player .layout1 .jp-volume-bar {
+    width: 100px !important;
+    height: 6px;
+    background: #e3ebf2;
+    border-radius: 3px;
+    position: relative;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+.dipl_audio_player .layout1 .jp-volume-bar-value {
+    height: 6px;
+    background: #6c8faf;
+    border-radius: 3px;
+    transition: width 0.2s;
+}
+.dipl_audio_player .layout2.dipl-audio-card {
+    position: relative;
+    height: 380px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+    background: #111;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.dipl_audio_player .layout2 .dipl-audio-center {
+    margin-top: auto;
+    margin-bottom: 20px;
+}
+.dipl_audio_player .layout2 .dipl-audio-bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    filter: blur(6px) brightness(0.6);
+    transform: scale(1.1);
+}
+.dipl_audio_player .layout2 .dipl-audio-overlay {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.dipl_audio_player .layout2 .dipl-audio-title {
+    color: #fff;
+    font-size: 22px;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 8px;
+}
+.dipl_audio_player .layout2 .dipl-audio-author {
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 10px;
+    opacity: 0.9;
+}
+.dipl_audio_player .layout2 .jp-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+.dipl_audio_player .layout2 .jp-mute,
+.dipl_audio_player .layout2 .jp-pause,
+.dipl_audio_player .layout2 .jp-play,
+.dipl_audio_player .layout2 .jp-unmute {
+    background: 0 0;
+    color: #fff;
+    border: 2px solid #fff;
+}
+.dipl_audio_player .layout2 .jp-mute:hover,
+.dipl_audio_player .layout2 .jp-pause:hover,
+.dipl_audio_player .layout2 .jp-play:hover,
+.dipl_audio_player .layout2 .jp-unmute:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+.dipl_audio_player .layout2 .jp-progress {
+    flex: 1;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 3px;
+    overflow: hidden;
+}
+.dipl_audio_player .layout2 .jp-play-bar {
+    width: 0%;
+    height: 100%;
+    background: #fff;
+}
+@media (max-width: 768px) {
+    .dipl_audio_player .layout1.dipl-audio-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .dipl_audio_player .layout1 .dipl-audio-info {
+        padding-right: 0;
+    }
+    .dipl_audio_player .layout1 .dipl-audio-image {
+        margin: 20px 0 0;
+        width: 100%;
+        max-width: 100%;
+    }
+}

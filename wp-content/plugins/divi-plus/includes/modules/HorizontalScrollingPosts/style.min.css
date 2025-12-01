@@ -1,0 +1,174 @@
+/* Sticky Posts Grid Container */
+.dipl_horizontal_scrolling_posts,
+.dipl-sticky-posts-scroller{
+	position: relative;
+	overflow: hidden;
+}
+.dipl-sticky-posts-wrapper{
+	position: relative;
+}
+.dipl-sticky-posts-inner{
+	display: flex; 
+	overflow: visible; 
+}
+
+.dipl_horizontal_scrolling_posts .dipl-sticky-posts-wrapper .dipl_horizontal_scrolling_post_item{
+	flex-shrink: 0;
+	margin-bottom: 0;
+}
+.dipl_horizontal_scrolling_post_item .et_pb_module_inner,
+.dipl_horizontal_scrolling_post_item > div{
+	height: 100%;
+}
+.dipl_horizontal_scrolling_post_wrapper{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	height: 100%;
+	width: 300px;
+	min-width: 300px;
+	margin-right: 20px; /* this should be coming from the module */ 
+	padding: 0;
+	font-size: 2rem;
+	background-color: #f0f0f0;
+	border: 0 solid #000;
+}
+.dipl_horizontal_scrolling_post_item:last-child .dipl_horizontal_scrolling_post_wrapper{
+	margin-right: 0;
+}
+
+.dipl_horizontal_scrolling_post_inner::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(244,244,244,0.7);
+	transition: all .3s ease-in-out;
+}
+.dipl_horizontal_scrolling_post_image_wrapper{
+	position: relative;
+	width: 100%;
+}
+.dipl_horizontal_scrolling_post_image{
+	width: 100%;
+	max-width: 100%;
+	object-fit: cover;
+	border: 0 solid #000;
+}
+.dipl_horizontal_scrolling_post_content_wrapper{
+	width: 100%;
+	border: 0 solid #000;
+	padding: 20px;
+}
+.dipl_horizontal_scrolling_post_title{
+	margin-top: 15px;
+}
+.dipl_horizontal_scrolling_post_excerpt{
+	font-size: 16px;
+	line-height: 1.2em;
+}
+
+.dipl_horizontal_scrolling_post_tag_wrapper span{
+	display: inline-block;
+}
+.dipl_horizontal_scrolling_post_tag:not( :last-child ){
+	margin-right: 5px;
+}
+.dipl_horizontal_scrolling_post_tag a{
+	display: inline-block;
+	padding: 5px;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 1.2;
+	color: #fff;
+	background-color: #000;
+	border: 0 solid #000;
+	transition: all 0.2s ease-in-out;
+}
+
+/* Button. */
+.dipl_horizontal_scrolling_post_wrapper .et_pb_button_wrapper{
+	margin-top: 15px;
+}
+.dipl_horizontal_scrolling_post_wrapper .et_pb_button{
+	display: inline-block;
+}
+.dipl_horizontal_scrolling_post_item .et_pb_button:before,
+.dipl_horizontal_scrolling_post_item .et_pb_button:after{
+	content: attr(data-icon);
+}
+
+/* Footer meta. */
+.dipl_horizontal_scrolling_post_meta_wrapper{
+	display: flex;
+	width: 100%;
+}
+.dipl_horizontal_scrolling_post_meta_wrapper .author,
+.dipl_horizontal_scrolling_post_meta_wrapper .published,
+.dipl_horizontal_scrolling_post_meta_wrapper .comments{
+	display: flex;
+	align-items: center;
+	font-size: 14px;
+}
+.dipl_horizontal_scrolling_post_tag_wrapper .published{
+	font-size: 14px;
+}
+.dipl_horizontal_scrolling_post_meta_wrapper .dipl_post_meta_divider{
+	padding: 0 4px;
+    text-align: center;
+	color: #666;
+	font-size: 14px;
+}
+.dipl_horizontal_scrolling_post_meta_wrapper .et-pb-icon{
+	font-family: ETmodules !important;
+	font-size: inherit;
+	margin-right: 5px;
+}
+
+/* Layout 1 Specific. */
+.dipl_horizontal_scrolling_posts .layout1 .dipl_horizontal_scrolling_post_content_wrapper{
+	flex-grow: 1;
+}
+.dipl_horizontal_scrolling_posts .layout1 .dipl_horizontal_scrolling_post_image_wrapper .dipl_horizontal_scrolling_post_tag_wrapper{
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	z-index: 2;
+}
+.dipl_horizontal_scrolling_posts .layout1 .dipl_horizontal_scrolling_post_meta_wrapper{
+	border-top: 1px solid #eaeaea;
+	padding: 5px 30px;
+	justify-content: space-between;
+}
+
+/* Layout 2 Specific. */
+.dipl_horizontal_scrolling_posts .layout2 .dipl_horizontal_scrolling_post_wrapper{
+	min-height: 500px;
+	padding: 0px;
+}
+.dipl_horizontal_scrolling_posts .layout2 .dipl_horizontal_scrolling_post_inner{
+	display: flex;
+	align-items: flex-end;
+	height: 100%;
+	min-width: 100%;
+	background-size: cover;
+	background-position: center;
+}
+.dipl_horizontal_scrolling_posts .layout2 .dipl_horizontal_scrolling_post_content_wrapper{
+	position: relative;
+}
+.dipl_horizontal_scrolling_posts .layout2 .dipl_horizontal_scrolling_post_tag_wrapper{
+	display: flex;
+	align-items: center;
+	margin-bottom: 10px;
+}
+.dipl_horizontal_scrolling_posts .layout2 .dipl_horizontal_scrolling_post_meta_wrapper{
+	margin-top: 15px;
+}
+.dipl_horizontal_scrolling_posts .layout2 .dipl_horizontal_scrolling_post_meta_wrapper > span:not( :last-child ) {
+	margin-right: 10px;
+}

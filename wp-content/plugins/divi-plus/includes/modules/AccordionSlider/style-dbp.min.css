@@ -1,0 +1,75 @@
+.et_divi_builder #et_builder_outer_content .dipl_accordion_slider{
+	text-align: center;
+}
+.et_divi_builder #et_builder_outer_content .dipl_accordion_slider .dipl_accordion_slider_wrapper .dipl_accordion_slider_item{
+	margin-bottom: 0;
+}
+
+/* Item. */
+.et_divi_builder #et_builder_outer_content .dipl_accordion_slider_slide.swiper-slide{
+	height: auto;
+	position: relative;
+	overflow: hidden;
+}
+.et_divi_builder #et_builder_outer_content .dipl_accordion_slider_item_wrapper{
+	position: relative;
+	height: 100%;
+	border: 0 solid #000000;
+}
+.et_divi_builder #et_builder_outer_content .dipl_accordion_slider_item_inner{
+	position: relative;
+	height: 350px;
+}
+
+.et_divi_builder #et_builder_outer_content .dipl_accordion_slider_item_image{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+	transition: all .5s ease-in-out;
+}
+
+.et_divi_builder #et_builder_outer_content .dipl_accordion_slider_item_content{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	padding: 20px;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.et_divi_builder #et_builder_outer_content .dipl_accordion_slider_item_content .et_pb_button_wrapper{
+	margin-top: 20px;
+}
+.et_divi_builder #et_builder_outer_content .dipl_accordion_slider_item_icon{
+	margin-bottom: 10px;
+}
+.et_divi_builder #et_builder_outer_content .dipl_accordion_slider_item_icon .et-pb-icon{
+	font-size: 38px;
+}
+
+.et_divi_builder #et_builder_outer_content .dipl_accordion_slider_item_icon,
+.et_divi_builder #et_builder_outer_content .dipl_accordion_slider_item_title,
+.et_divi_builder #et_builder_outer_content .dipl_accordion_slider_item_description,
+.et_divi_builder #et_builder_outer_content .dipl_accordion_slider_item_content .et_pb_button_wrapper{
+	display: none;
+	opacity: 0;
+	transition: 0.3s all;
+	width: 100%;
+}
+.et_divi_builder #et_builder_outer_content .swiper-slide-active .dipl_accordion_slider_item_icon,
+.et_divi_builder #et_builder_outer_content .swiper-slide-active .dipl_accordion_slider_item_title,
+.et_divi_builder #et_builder_outer_content .swiper-slide-active .dipl_accordion_slider_item_description,
+.et_divi_builder #et_builder_outer_content .swiper-slide-active .dipl_accordion_slider_item_content .et_pb_button_wrapper{
+	display: block;
+	opacity: 1;
+	transition: 0.3s all;
+}
+
+.et_divi_builder #et_builder_outer_content .dipl_accordion_slider_item_content .et_pb_button:after,
+.et_divi_builder #et_builder_outer_content .dipl_accordion_slider_item_content .et_pb_button:before{
+	content: attr(data-icon);
+}

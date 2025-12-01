@@ -1,0 +1,61 @@
+/* To hide scrollbar. */
+html.dipl_hide_scrollbar{
+	scrollbar-width: none;
+	-ms-overflow-style: none;
+}
+html.dipl_hide_scrollbar::-webkit-scrollbar{
+	display: none;
+}
+
+.dipl_scroll_zoom_gallery_scroller{
+	height: 100vh;
+	overflow: hidden;
+	position: relative;
+	transform: translate(0, 0);
+	background-size: cover;
+	background-position: 50%;
+	background-repeat: no-repeat;
+}
+.dipl_scroll_zoom_gallery_wrapper{
+	height: 100%;
+	left: 0;
+	perspective: 40px;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+.dipl_scroll_zoom_gallery_inner{
+	align-items: center;
+	display: flex;
+	height: 100%;
+	justify-content: center;
+	position: relative;
+	transform-style: preserve-3d;
+	width: 100%;
+}
+
+.dipl_scroll_zoom_gallery_item{
+	bottom: 0;
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	transform-style: preserve-3d;
+	width: 45%;
+}
+.dipl_scroll_zoom_gallery_item:nth-child(odd){
+	left: 0;
+	right: auto;
+}
+.dipl_scroll_zoom_gallery_item:nth-child(even){
+	left: auto;
+	right: 0;
+}
+.dipl_scroll_zoom_gallery_image{
+	position: absolute;
+	width: 100%;
+	height: auto;
+	top: 50%;
+	left: 0;
+	border: 0 solid #000;
+	transform: translateY(-50%);
+}

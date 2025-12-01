@@ -1,0 +1,122 @@
+.dipl_coupon{
+	padding: 15px;
+	border: 1px solid #333333;
+	border-radius: 5px;
+}
+.dipl_coupon .dipl_coupon_title{
+	font-size: 24px;
+}
+.dipl_coupon .dipl_coupon_description{
+	font-size: 16px;
+}
+.dipl_coupon .dipl_coupon_code{
+	background-color: #ffffff;
+	color: #0095f6;
+	padding: 10px 15px;
+	font-size: 18px;
+	font-weight: bold;
+	text-align: center;
+	border: 2px dashed #dddddd;
+	border-radius: 5px;
+	min-width: 150px;
+}
+.dipl_coupon_expiry_message.date-expired{
+	font-weight: 600;
+	color: #ff0000;
+}
+.dipl_coupon_expiry_message.date-active{
+	font-weight: 600;
+	color: #28a745;
+}
+.dipl_coupon_offer_wrapper{
+	border: 0 solid #000000;
+}
+
+/* Offer box. */
+.dipl_coupon_offer_wrapper.dipl_offer_box{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: #66b3e5;
+	color: #ffffff;
+	text-align: center;
+	border-radius: 5px;
+	overflow: hidden;
+	min-width: 100px;
+}
+.dipl_offer_box .dipl_coupon_offer_discount{
+	display: block;
+	width: 100%;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 20px;
+}
+.dipl_offer_box .dipl_coupon_offer_label{
+	display: block;
+	width: 100%;
+    background-color: black;
+    padding: 10px 20px;
+    font-weight: 600;
+}
+
+/* Offer Badge. */
+.dipl_coupon_offer_wrapper.dipl_offer_badge{
+    background-color: #000000;
+    color: #ffffff;
+    display: inline-block;
+    padding: 5px 15px;
+    font-weight: bold;
+    border-radius: 30px;
+}
+
+/* Layout 1. */
+.dipl_coupon_wrapper.layout1 .dipl_coupon_inner{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	gap: 20px;
+}
+.dipl_coupon_wrapper.layout1 .dipl_coupon_content_wrapper{
+	flex: 1;
+	min-width: 200px;
+}
+
+/* Layout 2. */
+.dipl_coupon_wrapper.layout2 .dipl_coupon_inner{
+    text-align: center;
+}
+.dipl_coupon_wrapper.layout2 .dipl_offer_badge{
+	margin-bottom: 20px;
+}
+.dipl_coupon_wrapper.layout2 .dipl_coupon_content_wrapper{
+	margin-bottom: 15px;
+}
+.dipl_coupon_wrapper.layout2 .dipl_coupon_code{
+	display: inline-block;
+}
+.dipl_coupon_wrapper.layout2 .dipl_coupon_expiry_message{
+	margin-top: 5px;
+}
+
+/* Layout 3. */
+.dipl_coupon_wrapper.layout3 .dipl_coupon_inner{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	justify-content: space-between;
+	gap: 20px;
+}
+.dipl_coupon_wrapper.layout3 .dipl_coupon_content_wrapper{
+	flex: 1;
+	min-width: 200px;
+}
+.dipl_coupon_wrapper.layout3 .dipl_coupon_code_wrapper{
+	margin-top: 10px;
+}
+.dipl_coupon_wrapper.layout3 .dipl_coupon_code{
+	display: inline-block;
+}
+.dipl_coupon_wrapper.layout3 .dipl_coupon_expiry_message{
+	margin-top: 5px;
+}

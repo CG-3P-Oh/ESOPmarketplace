@@ -1,0 +1,17 @@
+.dipl_mystery_image_wrap{
+	display: inline-block;
+	position: relative;
+	max-width: 100%;
+	border: 0px solid #000;
+}
+.dipl_mystery_image_wrap:hover .et_overlay{
+	z-index: 3;
+	opacity: 1;
+}
+.dipl_mystery_image_wrap img{
+	display: block;
+}
+
+.dipl_mystery_image_lightbox.mfp-ready{
+	opacity: 1;
+}
