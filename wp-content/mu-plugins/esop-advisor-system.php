@@ -333,7 +333,6 @@ function esop_advisor_coordinates_meta_box( $post ) {
 	<p>
 		<label for="esop_advisor_latitude">
 			<strong><?php esc_html_e( 'Latitude', 'esop-advisor' ); ?></strong>
-			<span class="required">*</span>
 		</label>
 		<input
 			type="text"
@@ -349,7 +348,6 @@ function esop_advisor_coordinates_meta_box( $post ) {
 	<p>
 		<label for="esop_advisor_longitude">
 			<strong><?php esc_html_e( 'Longitude', 'esop-advisor' ); ?></strong>
-			<span class="required">*</span>
 		</label>
 		<input
 			type="text"
@@ -363,7 +361,7 @@ function esop_advisor_coordinates_meta_box( $post ) {
 	</p>
 
 	<p class="description">
-		<?php esc_html_e( 'Use the Address Geocoder above to automatically populate these fields.', 'esop-advisor' ); ?>
+		<?php esc_html_e( 'Coordinates are optional. Use the Address Geocoder above to automatically populate these fields, or leave empty if location is not needed for map display.', 'esop-advisor' ); ?>
 	</p>
 	<?php
 }
@@ -668,62 +666,13 @@ function esop_advisor_column_sorting( $query ) {
 
 /**
  * ============================================================================
- * PUBLISH VALIDATION
+ * ADMIN NOTICES
  * ============================================================================
  */
-
-add_filter( 'wp_insert_post_data', 'esop_advisor_validate_publish', 10, 2 );
-
-function esop_advisor_validate_publish( $data, $postarr ) {
-	// Only check for esop_advisor post type
-	if ( $data['post_type'] !== 'esop_advisor' ) {
-		return $data;
-	}
-
-	// Only check when trying to publish
-	if ( $data['post_status'] !== 'publish' ) {
-		return $data;
-	}
-
-	// Check if coordinates exist
-	$post_id   = isset( $postarr['ID'] ) ? $postarr['ID'] : 0;
-	$latitude  = isset( $_POST['esop_advisor_latitude'] ) ? sanitize_text_field( $_POST['esop_advisor_latitude'] ) : get_post_meta( $post_id, '_esop_advisor_latitude', true );
-	$longitude = isset( $_POST['esop_advisor_longitude'] ) ? sanitize_text_field( $_POST['esop_advisor_longitude'] ) : get_post_meta( $post_id, '_esop_advisor_longitude', true );
-
-	// Validate coordinates
-	$lat_valid = is_numeric( $latitude ) && $latitude >= -90 && $latitude <= 90;
-	$lng_valid = is_numeric( $longitude ) && $longitude >= -180 && $longitude <= 180;
-
-	if ( ! $lat_valid || ! $lng_valid ) {
-		// Change status to draft
-		$data['post_status'] = 'draft';
-
-		// Set admin notice
-		add_filter( 'redirect_post_location', 'esop_advisor_publish_validation_notice' );
-	}
-
-	return $data;
-}
-
-function esop_advisor_publish_validation_notice( $location ) {
-	return add_query_arg( 'esop_coord_missing', '1', $location );
-}
 
 add_action( 'admin_notices', 'esop_advisor_admin_notices' );
 
 function esop_advisor_admin_notices() {
-	// Coordinate validation notice
-	if ( isset( $_GET['esop_coord_missing'] ) && $_GET['esop_coord_missing'] == '1' ) {
-		?>
-		<div class="notice notice-error is-dismissible">
-			<p>
-				<strong><?php esc_html_e( 'Advisor could not be published.', 'esop-advisor' ); ?></strong>
-				<?php esc_html_e( 'Valid latitude and longitude coordinates are required. Please use the Address Geocoder tool or enter coordinates manually.', 'esop-advisor' ); ?>
-			</p>
-		</div>
-		<?php
-	}
-
 	// MapBox token missing notice (on esop_advisor screens)
 	$screen = get_current_screen();
 	if ( $screen && $screen->post_type === 'esop_advisor' && ! defined( 'MAPBOX_ACCESS_TOKEN' ) ) {
@@ -733,6 +682,19 @@ function esop_advisor_admin_notices() {
 				<strong><?php esc_html_e( 'MapBox Configuration Required', 'esop-advisor' ); ?></strong><br>
 				<?php esc_html_e( 'The MapBox access token is not configured. Please add the following to your wp-config.php file:', 'esop-advisor' ); ?>
 				<br><code>define( 'MAPBOX_ACCESS_TOKEN', 'your_mapbox_token_here' );</code>
+			</p>
+		</div>
+		<?php
+	}
+
+	// Optional: Show info notice if advisor is published without coordinates
+	global $post;
+	if ( $post && $post->post_type === 'esop_advisor' && $post->post_status === 'publish' && ! esop_advisor_has_coordinates( $post->ID ) && isset( $_GET['message'] ) && $_GET['message'] == '6' ) {
+		?>
+		<div class="notice notice-info is-dismissible">
+			<p>
+				<strong><?php esc_html_e( 'Advisor published successfully!', 'esop-advisor' ); ?></strong>
+				<?php esc_html_e( 'Note: This advisor does not have coordinates set and will not appear on the map. Use the Address Geocoder tool to add location coordinates.', 'esop-advisor' ); ?>
 			</p>
 		</div>
 		<?php
