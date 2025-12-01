@@ -1,0 +1,87 @@
+# WordPress core files
+wp-config.php
+wp-content/uploads/
+wp-content/blogs.dir/
+wp-content/upgrade/
+wp-content/backup-db/
+wp-content/advanced-cache.php
+wp-content/wp-cache-config.php
+wp-content/cache/
+wp-content/backups/
+
+# Configuration files
+.htaccess
+.htaccess.bk
+.user.ini
+php.ini
+
+# Log files
+*.log
+error_log
+debug.log
+
+# Database files
+*.sql
+*.sqlite
+
+# Backup and archive files
+*.zip
+*.tar
+*.tar.gz
+*.bak
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# IDE and editor files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+.project
+.settings/
+*.tmproj
+*.esproj
+nbproject/
+
+# Node modules (if using npm/build tools)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Composer (if using)
+/vendor/
+composer.phar
+
+# Environment files
+.env
+.env.*
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# WordPress cache
+wp-content/cache/*
+wp-content/wflogs/*
+
+# Wordfence
+wordfence-waf.php
+.user.ini
+
+# CSV exports
+*.csv
+
+# Claude Code settings
+.claude/settings.local.json

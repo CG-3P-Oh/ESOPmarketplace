@@ -1,0 +1,71 @@
+# WordPress core directories
+wp-admin/
+wp-includes/
+
+# Vendor and dependencies
+node_modules/
+vendor/
+
+# Media uploads
+wp-content/uploads/
+
+# Cache and temporary files
+wp-content/cache/
+wp-content/wflogs/
+wp-content/backup-db/
+wp-content/backups/
+wp-content/upgrade/
+*.cache
+
+# Log files
+*.log
+error_log
+debug.log
+
+# Minified files
+*.min.js
+*.min.css
+
+# Archive files
+*.zip
+*.tar
+*.tar.gz
+*.rar
+
+# Database files
+*.sql
+*.sqlite
+
+# Backup files
+*.bak
+*.old
+*~
+
+# CSV exports
+*.csv
+
+# Large WordPress packages
+wordpress/
+wp-content/blogs.dir/
+
+# Build artifacts
+dist/
+build/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+
+# License and readme from WordPress core
+license.txt
+readme.html
+
+# Wordfence
+wordfence-waf.php
+
+# Any large data files
+new-esop-site.zip
