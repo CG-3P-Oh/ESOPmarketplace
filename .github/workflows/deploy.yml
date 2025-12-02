@@ -23,6 +23,17 @@ jobs:
         with:
           php-version: '8.1'
 
+      - name: List files before deploy
+        run: |
+          echo "=== Files in wp-content/mu-plugins ==="
+          ls -lh wp-content/mu-plugins/
+          echo "=== esop-advisor-system.php details ==="
+          ls -lh wp-content/mu-plugins/esop-advisor-system.php
+          echo "=== First 30 lines of file ==="
+          head -30 wp-content/mu-plugins/esop-advisor-system.php
+          echo "=== Searching for 'Coordinates are optional' ==="
+          grep -n "Coordinates are optional" wp-content/mu-plugins/esop-advisor-system.php || echo "NOT FOUND"
+
       - name: Deploy via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
@@ -31,6 +42,7 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           server-dir: /home/esopmark/new.esopmarketplace.com/
           state-name: .ftp-deploy-sync-state.json
+          dry-run: false
           dangerous-force-sync: true
           log-level: verbose
           exclude: |
