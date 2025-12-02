@@ -5024,12 +5024,6 @@
             "hash": "9e97b4398cfcf2316b2e38e340ab145c52cfca2e1a3b947e1b732da28747893f"
         },
         {
-            "type": "file",
-            "name": "wp-content/mu-plugins/esop-advisor-system.php",
-            "size": 43637,
-            "hash": "52ba9e467121d4b1b0ea6984b2217a1234d7b16db8a9878523853889f9139b04"
-        },
-        {
             "type": "folder",
             "name": "wp-content/plugins/divi-plus"
         },
