@@ -259,7 +259,7 @@ function esop_advisor_geocoder_callback( $post ) {
     $has_coords = ! empty( $lat ) && ! empty( $lng );
     ?>
     
-    <div class="esop-geocoder-box" style="background: <?php echo $has_coords ? '#d4edda' : '#fff3cd'; ?>; border: 1px solid <?php echo $has_coords ? '#c3e6cb' : '#ffc107'; ?>; border-radius: 5px; padding: 20px; margin-bottom: 15px;">
+    <div class="esop-geocoder-box" style="background: <?php echo $has_coords ? '#d4edda' : '#f8f9fa'; ?>; border: 1px solid <?php echo $has_coords ? '#c3e6cb' : '#dee2e6'; ?>; border-radius: 5px; padding: 20px; margin-bottom: 15px;">
         
         <?php if ( ! defined( 'MAPBOX_ACCESS_TOKEN' ) || empty( MAPBOX_ACCESS_TOKEN ) ) : ?>
             <!-- Warning when MapBox token is not configured -->
@@ -270,11 +270,11 @@ function esop_advisor_geocoder_callback( $post ) {
         <?php endif; ?>
         
         <!-- Status indicator showing if coordinates are set -->
-        <div style="margin-bottom: 15px; padding: 10px; border-radius: 4px; background: <?php echo $has_coords ? '#28a745' : '#ffc107'; ?>; color: <?php echo $has_coords ? '#fff' : '#856404'; ?>;">
+        <div style="margin-bottom: 15px; padding: 10px; border-radius: 4px; background: <?php echo $has_coords ? '#28a745' : '#d3d3d3'; ?>; color: <?php echo $has_coords ? '#fff' : '#333'; ?>;">
             <?php if ( $has_coords ) : ?>
                 ✅ <strong>Coordinates Set:</strong> <?php echo esc_html( $lat ); ?>, <?php echo esc_html( $lng ); ?>
             <?php else : ?>
-                ⚠️ <strong>Coordinates Required:</strong> Use the lookup tool below or enter manually in Advisor Details
+                ℹ️ <strong>No Coordinates Set:</strong> Use the lookup tool below to add map location (optional)
             <?php endif; ?>
         </div>
         
@@ -488,45 +488,45 @@ function esop_advisor_details_callback( $post ) {
         <!-- Coordinates Section Header -->
         <tr class="esop-coord-row">
             <td colspan="2" style="background: #e9ecef; padding: 15px;">
-                <strong>📍 Location Coordinates</strong> <span class="esop-required">* Required for map display</span>
+                <strong>📍 Location Coordinates</strong> <span style="color: #666; font-style: italic;">(Optional - for map display)</span>
                 <p class="description" style="margin-top: 5px; margin-bottom: 0;">
                     Use the Address Geocoder above to automatically populate these fields, or enter manually.
                     Format: Decimal degrees (e.g., 37.7749 for latitude, -122.4194 for longitude)
                 </p>
             </td>
         </tr>
-        
+
         <!-- Latitude -->
         <tr class="esop-coord-row">
-            <th><label for="esop_advisor_latitude">Latitude <span class="esop-required">*</span></label></th>
+            <th><label for="esop_advisor_latitude">Latitude</label></th>
             <td>
-                <input type="text" 
-                       id="esop_advisor_latitude" 
-                       name="esop_advisor_latitude" 
-                       value="<?php echo esc_attr( $latitude ); ?>" 
+                <input type="text"
+                       id="esop_advisor_latitude"
+                       name="esop_advisor_latitude"
+                       value="<?php echo esc_attr( $latitude ); ?>"
                        placeholder="37.7749"
                        class="esop-coord-field"
                        style="width: 200px;"
                        pattern="-?[0-9]*\.?[0-9]+"
                        title="Enter a valid decimal number (e.g., 37.7749)">
-                <p class="description">Valid range: -90 to 90</p>
+                <p class="description">Valid range: -90 to 90 (optional)</p>
             </td>
         </tr>
-        
+
         <!-- Longitude -->
         <tr class="esop-coord-row">
-            <th><label for="esop_advisor_longitude">Longitude <span class="esop-required">*</span></label></th>
+            <th><label for="esop_advisor_longitude">Longitude</label></th>
             <td>
-                <input type="text" 
-                       id="esop_advisor_longitude" 
-                       name="esop_advisor_longitude" 
-                       value="<?php echo esc_attr( $longitude ); ?>" 
+                <input type="text"
+                       id="esop_advisor_longitude"
+                       name="esop_advisor_longitude"
+                       value="<?php echo esc_attr( $longitude ); ?>"
                        placeholder="-122.4194"
                        class="esop-coord-field"
                        style="width: 200px;"
                        pattern="-?[0-9]*\.?[0-9]+"
                        title="Enter a valid decimal number (e.g., -122.4194)">
-                <p class="description">Valid range: -180 to 180</p>
+                <p class="description">Valid range: -180 to 180 (optional)</p>
             </td>
         </tr>
     </table>
@@ -631,8 +631,10 @@ function esop_advisor_sanitize_coordinate( $value ) {
 
 /**
  * Validate coordinates before publishing.
- * 
- * Prevents publishing advisors without valid coordinates.
+ *
+ * NOTE: Coordinates are now OPTIONAL to allow saving advisor profiles
+ * before MapBox configuration is complete. This validation is disabled.
+ * Advisors without coordinates simply won't appear on the map.
  *
  * @since 1.0.0
  * @param array $data    Sanitized post data.
@@ -640,21 +642,21 @@ function esop_advisor_sanitize_coordinate( $value ) {
  * @return array Modified post data.
  */
 function esop_advisor_validate_before_publish( $data, $postarr ) {
-    
+
     // Only validate esop_advisor posts
     if ( $data['post_type'] !== 'esop_advisor' ) {
         return $data;
     }
-    
+
     // Only validate when trying to publish
     if ( $data['post_status'] !== 'publish' ) {
         return $data;
     }
-    
+
     // Check for coordinates
     $latitude  = isset( $postarr['esop_advisor_latitude'] ) ? trim( $postarr['esop_advisor_latitude'] ) : '';
     $longitude = isset( $postarr['esop_advisor_longitude'] ) ? trim( $postarr['esop_advisor_longitude'] ) : '';
-    
+
     // If this is an existing post, also check saved meta
     if ( ! empty( $postarr['ID'] ) ) {
         if ( empty( $latitude ) ) {
@@ -664,31 +666,31 @@ function esop_advisor_validate_before_publish( $data, $postarr ) {
             $longitude = get_post_meta( $postarr['ID'], '_esop_advisor_longitude', true );
         }
     }
-    
+
     $errors = array();
-    
-    // Validate latitude
-    if ( empty( $latitude ) ) {
-        $errors[] = 'Latitude is required';
-    } elseif ( ! is_numeric( $latitude ) || floatval( $latitude ) < -90 || floatval( $latitude ) > 90 ) {
-        $errors[] = 'Latitude must be a number between -90 and 90';
+
+    // Validate latitude format if provided (but don't require it)
+    if ( ! empty( $latitude ) ) {
+        if ( ! is_numeric( $latitude ) || floatval( $latitude ) < -90 || floatval( $latitude ) > 90 ) {
+            $errors[] = 'Latitude must be a number between -90 and 90';
+        }
     }
-    
-    // Validate longitude
-    if ( empty( $longitude ) ) {
-        $errors[] = 'Longitude is required';
-    } elseif ( ! is_numeric( $longitude ) || floatval( $longitude ) < -180 || floatval( $longitude ) > 180 ) {
-        $errors[] = 'Longitude must be a number between -180 and 180';
+
+    // Validate longitude format if provided (but don't require it)
+    if ( ! empty( $longitude ) ) {
+        if ( ! is_numeric( $longitude ) || floatval( $longitude ) < -180 || floatval( $longitude ) > 180 ) {
+            $errors[] = 'Longitude must be a number between -180 and 180';
+        }
     }
-    
-    // If there are errors, prevent publishing and set to draft
+
+    // Only prevent publishing if coordinates are present but invalid
     if ( ! empty( $errors ) ) {
         $data['post_status'] = 'draft';
-        
+
         // Store error messages in transient for display
         set_transient( 'esop_advisor_errors_' . $postarr['ID'], $errors, 30 );
     }
-    
+
     return $data;
 }
 add_filter( 'wp_insert_post_data', 'esop_advisor_validate_before_publish', 10, 2 );
@@ -701,13 +703,13 @@ add_filter( 'wp_insert_post_data', 'esop_advisor_validate_before_publish', 10, 2
  */
 function esop_advisor_display_validation_errors() {
     global $post;
-    
+
     if ( ! $post || $post->post_type !== 'esop_advisor' ) {
         return;
     }
-    
+
     $errors = get_transient( 'esop_advisor_errors_' . $post->ID );
-    
+
     if ( $errors ) {
         ?>
         <div class="notice notice-error is-dismissible">
@@ -717,10 +719,10 @@ function esop_advisor_display_validation_errors() {
                     <li><?php echo esc_html( $error ); ?></li>
                 <?php endforeach; ?>
             </ul>
-            <p>Use the <strong>Address Geocoder</strong> at the top of this page to look up coordinates.</p>
+            <p>Correct the coordinate format using the <strong>Address Geocoder</strong> tool, or leave coordinates blank.</p>
         </div>
         <?php
-        
+
         // Delete the transient after displaying
         delete_transient( 'esop_advisor_errors_' . $post->ID );
     }
