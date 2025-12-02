@@ -14,8 +14,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Install lftp
-        run: sudo apt-get update -qq && sudo apt-get install -y lftp
+      - name: Install ncftp
+        run: sudo apt-get update -qq && sudo apt-get install -y ncftp
 
       - name: Deploy to server via FTP
         env:
@@ -25,18 +25,19 @@ jobs:
         run: |
           echo "🚀 Starting deployment to new.esopmarketplace.com..."
 
-          lftp -u "${FTP_USERNAME}","${FTP_PASSWORD}" "${FTP_SERVER}" <<'LFTP'
-          set ftp:ssl-allow no
-          set net:timeout 30
-          set net:max-retries 3
-          cd /home/esopmark/new.esopmarketplace.com
-          mirror --reverse --verbose --only-newer --exclude .git/ --exclude .github/ --exclude .claude/ --exclude .claudeignore --exclude README.md --exclude node_modules/ --exclude .DS_Store --exclude Thumbs.db --exclude wp-config.php --exclude .htaccess --exclude .user.ini --exclude php.ini --exclude error_log --exclude wp-content/cache/ --exclude wp-content/uploads/ --exclude wp-content/backups/ --exclude .env --exclude manual-upload.php ./ ./
-          bye
-          LFTP
+          # Create .ncftp bookmarks for easy connection
+          mkdir -p ~/.ncftp
+          cat > ~/.ncftp/bookmarks << EOF
+          esop,${FTP_SERVER},${FTP_USERNAME},${FTP_PASSWORD},,/home/esopmark/new.esopmarketplace.com,
+          EOF
+
+          # Upload only the mu-plugins directory for now (the critical file)
+          echo "📤 Uploading mu-plugins directory..."
+          ncftpput -R -v -u "${FTP_USERNAME}" -p "${FTP_PASSWORD}" "${FTP_SERVER}" /home/esopmark/new.esopmarketplace.com/wp-content/mu-plugins wp-content/mu-plugins/*
 
           echo "✅ Deployment complete!"
 
-      - name: Verify critical files
+      - name: Verify plugin file
         env:
           FTP_SERVER: ${{ secrets.FTP_SERVER }}
           FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
@@ -44,12 +45,6 @@ jobs:
         run: |
           echo "📋 Verifying plugin file was uploaded..."
 
-          lftp -c "
-          set ftp:ssl-allow no;
-          open -u $FTP_USERNAME,$FTP_PASSWORD $FTP_SERVER;
-          cd /home/esopmark/new.esopmarketplace.com/wp-content/mu-plugins;
-          cls -lh esop-advisor-system.php;
-          bye
-          "
+          ncftpls -u "${FTP_USERNAME}" -p "${FTP_PASSWORD}" "ftp://${FTP_SERVER}/home/esopmark/new.esopmarketplace.com/wp-content/mu-plugins/esop-advisor-system.php"
 
           echo "✅ Verification complete"
