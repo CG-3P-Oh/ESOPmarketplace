@@ -85,3 +85,6 @@ wordfence-waf.php
 
 # Claude Code settings
 .claude/settings.local.json
+
+# FTP Deploy sync state (should not be in Git)
+.ftp-deploy-sync-state.json

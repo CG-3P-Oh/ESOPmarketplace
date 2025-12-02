@@ -61,7 +61,6 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           server-dir: /home/esopmark/new.esopmarketplace.com/
-          state-name: .ftp-deploy-sync-state.json
           log-level: verbose
           exclude: |
             **/.git*
@@ -88,16 +87,3 @@ jobs:
             .claude/
             .claudeignore
             README.md
-
-      - name: Commit updated sync state
-        run: |
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
-          git add .ftp-deploy-sync-state.json
-          git diff --quiet && git diff --staged --quiet || git commit -m "Update FTP sync state after deployment"
-
-      - name: Push sync state changes
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{ github.ref }}
