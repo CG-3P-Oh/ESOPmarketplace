@@ -31,6 +31,8 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           server-dir: /home/esopmark/new.esopmarketplace.com/
           state-name: .ftp-deploy-sync-state.json
+          dangerous-force-sync: true
+          log-level: verbose
           exclude: |
             **/.git*
             **/.git*/**
