@@ -25,38 +25,7 @@ jobs:
         run: |
           echo "🚀 Starting deployment to new.esopmarketplace.com..."
 
-          # Run lftp with inline commands
-          lftp -c "
-          set ftp:ssl-allow no;
-          set net:timeout 30;
-          set net:max-retries 3;
-          set net:reconnect-interval-base 5;
-          open -u $FTP_USERNAME,$FTP_PASSWORD $FTP_SERVER;
-          cd /home/esopmark/new.esopmarketplace.com;
-          mirror --reverse \
-                 --verbose \
-                 --only-newer \
-                 --exclude .git/ \
-                 --exclude .github/ \
-                 --exclude .claude/ \
-                 --exclude .claudeignore \
-                 --exclude README.md \
-                 --exclude node_modules/ \
-                 --exclude .DS_Store \
-                 --exclude Thumbs.db \
-                 --exclude wp-config.php \
-                 --exclude .htaccess \
-                 --exclude .user.ini \
-                 --exclude php.ini \
-                 --exclude error_log \
-                 --exclude wp-content/cache/ \
-                 --exclude wp-content/uploads/ \
-                 --exclude wp-content/backups/ \
-                 --exclude .env \
-                 --exclude manual-upload.php \
-                 ./ ./;
-          bye
-          "
+          lftp -c "set ftp:ssl-allow no; set net:timeout 30; set net:max-retries 3; open -u $FTP_USERNAME,$FTP_PASSWORD $FTP_SERVER; cd /home/esopmark/new.esopmarketplace.com; mirror --reverse --verbose --only-newer --exclude .git/ --exclude .github/ --exclude .claude/ --exclude .claudeignore --exclude README.md --exclude node_modules/ --exclude .DS_Store --exclude Thumbs.db --exclude wp-config.php --exclude .htaccess --exclude .user.ini --exclude php.ini --exclude error_log --exclude wp-content/cache/ --exclude wp-content/uploads/ --exclude wp-content/backups/ --exclude .env --exclude manual-upload.php ./ ./; bye"
 
           echo "✅ Deployment complete!"
 
