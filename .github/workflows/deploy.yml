@@ -1,0 +1,26 @@
+name: Deploy to Staging
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Deploy via LFTP Mirror
+        uses: pressidium/lftp-mirror-action@v1
+        with:
+          host: ${{ secrets.FTP_SERVER }}
+          user: ${{ secrets.FTP_USERNAME }}
+          pass: ${{ secrets.FTP_PASSWORD }}
+          remoteDir: /home/esopmark/new.esopmarketplace.com/
+          localDir: ./
+          options: --verbose --reverse --only-newer --no-perms
+          ignore: .git/ .github/ .claude/ .claudeignore README.md node_modules/ .DS_Store Thumbs.db wp-config.php .htaccess .user.ini php.ini error_log wp-content/cache/ wp-content/uploads/ wp-content/backups/ .env
