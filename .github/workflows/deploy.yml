@@ -32,7 +32,7 @@ jobs:
           set net:max-retries 3
           set net:reconnect-interval-base 5
           set cmd:fail-exit yes
-          mirror --reverse --only-newer --verbose --parallel=4 --no-perms -x ^\.git/ -x ^\.github/ -x ^\.claude/ -x ^\.claudeignore$ -x ^README\.md$ -x ^node_modules/ -x ^\.DS_Store$ -x ^Thumbs\.db$ -x ^wp-config\.php$ -x ^\.htaccess$ -x ^\.user\.ini$ -x ^php\.ini$ -x ^error_log$ -x ^wp-content/cache/ -x ^wp-content/uploads/ -x ^wp-content/backups/ -x ^\.env$ -x ^ESOP-ADVISOR -x \.backup ./ /home/esopmark/new.esopmarketplace.com/
+          mirror --reverse --only-newer --no-delete --verbose --parallel=4 --no-perms -x ^\.git/ -x ^\.github/ -x ^\.claude/ -x ^\.claudeignore$ -x ^README\.md$ -x ^node_modules/ -x ^\.DS_Store$ -x ^Thumbs\.db$ -x ^wp-config\.php$ -x ^\.htaccess$ -x ^\.user\.ini$ -x ^php\.ini$ -x ^error_log$ -x ^wp-content/cache/ -x ^wp-content/uploads/ -x ^wp-content/backups/ -x ^\.env$ -x ^ESOP-ADVISOR -x \.backup -x ^wp-admin/ -x ^wp-includes/ ./ /home/esopmark/new.esopmarketplace.com/
           quit
           LFTP_SCRIPT
 
