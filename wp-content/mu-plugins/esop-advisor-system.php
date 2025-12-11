@@ -4001,6 +4001,157 @@ function esop_advisor_flush_output_buffer() {
 }
 
 /**
+ * DEBUG: Add visible diagnostic info to advisor pages
+ * This helps identify if the plugin is loading and shortcodes are registered
+ */
+add_action( 'wp_footer', 'esop_advisor_debug_footer', 9999 );
+
+function esop_advisor_debug_footer() {
+	if ( ! is_singular( 'esop_advisor' ) ) {
+		return;
+	}
+
+	global $shortcode_tags;
+
+	$registered = array(
+		'esop_advisor_articles'     => isset( $shortcode_tags['esop_advisor_articles'] ) ? 'YES' : 'NO',
+		'esop_advisor_case_studies' => isset( $shortcode_tags['esop_advisor_case_studies'] ) ? 'YES' : 'NO',
+		'esop_advisor_ratings'      => isset( $shortcode_tags['esop_advisor_ratings'] ) ? 'YES' : 'NO',
+		'esop_advisor_blog'         => isset( $shortcode_tags['esop_advisor_blog'] ) ? 'YES' : 'NO',
+		'esop_advisor_diagnostic'   => isset( $shortcode_tags['esop_advisor_diagnostic'] ) ? 'YES' : 'NO',
+	);
+
+	$advisor_id = esop_advisor_get_current_advisor_id();
+
+	echo "\n<!-- ESOP ADVISOR DEBUG\n";
+	echo "Plugin loaded: YES\n";
+	echo "Advisor ID detected: " . ( $advisor_id ? $advisor_id : 'NO' ) . "\n";
+	echo "is_singular(esop_advisor): " . ( is_singular( 'esop_advisor' ) ? 'YES' : 'NO' ) . "\n";
+	echo "Shortcodes registered:\n";
+	foreach ( $registered as $tag => $status ) {
+		echo "  - {$tag}: {$status}\n";
+	}
+	echo "Output buffer level: " . ob_get_level() . "\n";
+	echo "-->\n";
+}
+
+/**
+ * NUCLEAR OPTION: Process shortcodes via JavaScript injection
+ * If all PHP methods fail, inject JS to replace shortcode text with AJAX-loaded content
+ * This is a last resort diagnostic - it outputs the raw shortcode for JS processing
+ */
+add_action( 'wp_footer', 'esop_advisor_shortcode_fallback_js', 10000 );
+
+function esop_advisor_shortcode_fallback_js() {
+	if ( ! is_singular( 'esop_advisor' ) ) {
+		return;
+	}
+
+	$advisor_id = esop_advisor_get_current_advisor_id();
+	if ( ! $advisor_id ) {
+		return;
+	}
+
+	// Get nonce for AJAX
+	$nonce = wp_create_nonce( 'esop_shortcode_fallback' );
+
+	?>
+	<script>
+	(function() {
+		// Find any unprocessed shortcode text on the page
+		var shortcodePatterns = [
+			/\[esop_advisor_articles[^\]]*\]/g,
+			/\[esop_advisor_case_studies[^\]]*\]/g,
+			/\[esop_advisor_ratings[^\]]*\]/g,
+			/\[esop_advisor_blog[^\]]*\]/g,
+			/\[esop_advisor_diagnostic[^\]]*\]/g
+		];
+
+		var body = document.body.innerHTML;
+		var foundShortcodes = [];
+
+		shortcodePatterns.forEach(function(pattern) {
+			var matches = body.match(pattern);
+			if (matches) {
+				foundShortcodes = foundShortcodes.concat(matches);
+			}
+		});
+
+		if (foundShortcodes.length > 0) {
+			console.log('ESOP Advisor: Found unprocessed shortcodes:', foundShortcodes);
+
+			// Try to process each shortcode via AJAX
+			foundShortcodes.forEach(function(shortcode) {
+				var formData = new FormData();
+				formData.append('action', 'esop_process_shortcode_fallback');
+				formData.append('shortcode', shortcode);
+				formData.append('advisor_id', <?php echo intval( $advisor_id ); ?>);
+				formData.append('nonce', '<?php echo esc_js( $nonce ); ?>');
+
+				fetch('<?php echo esc_url( admin_url( 'admin-ajax.php' ) ); ?>', {
+					method: 'POST',
+					body: formData
+				})
+				.then(function(response) { return response.json(); })
+				.then(function(data) {
+					if (data.success && data.data.html) {
+						// Replace the shortcode text with the rendered HTML
+						var escaped = shortcode.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+						var regex = new RegExp(escaped, 'g');
+						document.body.innerHTML = document.body.innerHTML.replace(regex, data.data.html);
+						console.log('ESOP Advisor: Replaced shortcode via AJAX:', shortcode);
+					}
+				})
+				.catch(function(err) {
+					console.error('ESOP Advisor: AJAX fallback failed for', shortcode, err);
+				});
+			});
+		}
+	})();
+	</script>
+	<?php
+}
+
+/**
+ * AJAX handler for shortcode fallback processing
+ */
+add_action( 'wp_ajax_esop_process_shortcode_fallback', 'esop_advisor_ajax_shortcode_fallback' );
+add_action( 'wp_ajax_nopriv_esop_process_shortcode_fallback', 'esop_advisor_ajax_shortcode_fallback' );
+
+function esop_advisor_ajax_shortcode_fallback() {
+	// Verify nonce
+	if ( ! wp_verify_nonce( $_POST['nonce'] ?? '', 'esop_shortcode_fallback' ) ) {
+		wp_send_json_error( array( 'message' => 'Invalid nonce' ) );
+	}
+
+	$shortcode = sanitize_text_field( $_POST['shortcode'] ?? '' );
+	$advisor_id = intval( $_POST['advisor_id'] ?? 0 );
+
+	if ( empty( $shortcode ) || ! $advisor_id ) {
+		wp_send_json_error( array( 'message' => 'Missing parameters' ) );
+	}
+
+	// Set up the post context for the shortcode
+	global $post;
+	$post = get_post( $advisor_id );
+	setup_postdata( $post );
+
+	// Process the shortcode
+	$html = do_shortcode( $shortcode );
+
+	wp_reset_postdata();
+
+	// Log this fallback usage
+	esop_advisor_debug_log( 'AJAX shortcode fallback used', array(
+		'shortcode'  => $shortcode,
+		'advisor_id' => $advisor_id,
+		'html_len'   => strlen( $html ),
+	) );
+
+	wp_send_json_success( array( 'html' => $html ) );
+}
+
+/**
  * Setup Divi Blog filtering on advisor pages
  */
 add_action( 'wp', 'esop_advisor_setup_divi_filtering' );
