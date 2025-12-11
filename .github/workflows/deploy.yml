@@ -19,14 +19,32 @@ jobs:
 
       - name: Deploy changed files via LFTP
         timeout-minutes: 10
+        env:
+          FTP_HOST: ${{ secrets.FTP_SERVER }}
+          FTP_USER: ${{ secrets.FTP_USERNAME }}
+          FTP_PASS: ${{ secrets.FTP_PASSWORD }}
         run: |
-          lftp <<EOF
+          # Create lftp script file
+          cat > /tmp/deploy.lftp << 'LFTP_SCRIPT'
           set ftp:ssl-allow yes
           set ssl:verify-certificate no
           set net:timeout 30
           set net:max-retries 3
           set net:reconnect-interval-base 5
-          open -u ${{ secrets.FTP_USERNAME }},${{ secrets.FTP_PASSWORD }} ${{ secrets.FTP_SERVER }}
-          mirror --reverse --only-newer --verbose --parallel=4 --no-perms --exclude ^\.git/ --exclude ^\.github/ --exclude ^\.claude/ --exclude ^\.claudeignore$ --exclude ^README\.md$ --exclude ^node_modules/ --exclude ^\.DS_Store$ --exclude ^Thumbs\.db$ --exclude ^wp-config\.php$ --exclude ^\.htaccess$ --exclude ^\.user\.ini$ --exclude ^php\.ini$ --exclude ^error_log$ --exclude ^wp-content/cache/ --exclude ^wp-content/uploads/ --exclude ^wp-content/backups/ --exclude ^\.env$ --exclude ^ESOP-ADVISOR-DOCUMENTATION\.md$ --exclude ^ESOP-ADVISOR-QUICKSTART\.md$ ./ /home/esopmark/new.esopmarketplace.com/
-          bye
-          EOF
+          set cmd:fail-exit yes
+          mirror --reverse --only-newer --verbose --parallel=4 --no-perms -x ^\.git/ -x ^\.github/ -x ^\.claude/ -x ^\.claudeignore$ -x ^README\.md$ -x ^node_modules/ -x ^\.DS_Store$ -x ^Thumbs\.db$ -x ^wp-config\.php$ -x ^\.htaccess$ -x ^\.user\.ini$ -x ^php\.ini$ -x ^error_log$ -x ^wp-content/cache/ -x ^wp-content/uploads/ -x ^wp-content/backups/ -x ^\.env$ -x ^ESOP-ADVISOR -x \.backup ./ /home/esopmark/new.esopmarketplace.com/
+          quit
+          LFTP_SCRIPT
+
+          # Remove leading whitespace from the script file
+          sed -i 's/^[[:space:]]*//' /tmp/deploy.lftp
+
+          echo "=== LFTP Script Contents ==="
+          cat /tmp/deploy.lftp
+          echo ""
+          echo "=== Starting Deploy ==="
+
+          # Execute lftp with credentials passed via command line
+          lftp -u "${FTP_USER},${FTP_PASS}" "${FTP_HOST}" -f /tmp/deploy.lftp
+
+          echo "=== Deploy Complete ==="
