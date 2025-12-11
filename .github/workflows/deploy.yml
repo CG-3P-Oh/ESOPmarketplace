@@ -44,7 +44,7 @@ jobs:
           echo ""
           echo "=== Starting Deploy ==="
 
-          # Execute lftp with credentials passed via command line
-          lftp -u "${FTP_USER},${FTP_PASS}" "${FTP_HOST}" -f /tmp/deploy.lftp
+          # Execute lftp with credentials, pipe script via stdin
+          lftp -u "${FTP_USER},${FTP_PASS}" "${FTP_HOST}" < /tmp/deploy.lftp
 
           echo "=== Deploy Complete ==="
