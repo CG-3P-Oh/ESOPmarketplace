@@ -2,7 +2,7 @@
 /**
  * Plugin Name: ESOP Advisor System
  * Description: Complete ESOP Advisor directory with MapBox map integration. Self-contained MU plugin with no third-party dependencies.
- * Version: 1.11.1
+ * Version: 1.11.2
  * Author: ESOP Marketplace / 3PRIME
  * Text Domain: esop-advisor
  *
