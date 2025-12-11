@@ -3466,7 +3466,7 @@ function esop_advisor_contact_button_shortcode( $atts ) {
 add_shortcode( 'esop_advisor_diagnostic', 'esop_advisor_diagnostic_shortcode' );
 
 function esop_advisor_diagnostic_shortcode( $atts ) {
-	global $post;
+	global $post, $wpdb;
 
 	$advisor_id = esop_advisor_get_current_advisor_id();
 	$author_id  = $advisor_id ? get_post_meta( $advisor_id, '_esop_advisor_user_id', true ) : null;
@@ -3474,7 +3474,39 @@ function esop_advisor_diagnostic_shortcode( $atts ) {
 	// Get category config
 	$category_map = esop_advisor_get_category_config();
 
-	// Test query for articles
+	// DIRECT DATABASE QUERY to see what's actually stored
+	$db_associated = $wpdb->get_results( $wpdb->prepare(
+		"SELECT pm.post_id, pm.meta_value, p.post_title, p.post_status
+		 FROM {$wpdb->postmeta} pm
+		 JOIN {$wpdb->posts} p ON pm.post_id = p.ID
+		 WHERE pm.meta_key = '_esop_associated_advisor'
+		 AND pm.meta_value = %s
+		 LIMIT 20",
+		strval( $advisor_id )
+	) );
+
+	// Also check with integer comparison
+	$db_associated_int = $wpdb->get_results( $wpdb->prepare(
+		"SELECT pm.post_id, pm.meta_value, p.post_title, p.post_status
+		 FROM {$wpdb->postmeta} pm
+		 JOIN {$wpdb->posts} p ON pm.post_id = p.ID
+		 WHERE pm.meta_key = '_esop_associated_advisor'
+		 AND pm.meta_value = %d
+		 LIMIT 20",
+		intval( $advisor_id )
+	) );
+
+	// Check ALL posts with this meta key to see what values exist
+	$all_associated = $wpdb->get_results(
+		"SELECT pm.post_id, pm.meta_value, p.post_title
+		 FROM {$wpdb->postmeta} pm
+		 JOIN {$wpdb->posts} p ON pm.post_id = p.ID
+		 WHERE pm.meta_key = '_esop_associated_advisor'
+		 AND p.post_type = 'post'
+		 LIMIT 30"
+	);
+
+	// Test query using WP_Query (original method)
 	$test_query_args = array(
 		'post_type'      => 'post',
 		'post_status'    => 'publish',
@@ -3483,28 +3515,32 @@ function esop_advisor_diagnostic_shortcode( $atts ) {
 		'meta_query'     => array(
 			array(
 				'key'   => '_esop_associated_advisor',
-				'value' => intval( $advisor_id ),
+				'value' => strval( $advisor_id ), // Try string instead of int
 			),
 		),
 	);
 	$associated_posts = get_posts( $test_query_args );
 
 	$diagnostic_data = array(
-		'timestamp'       => current_time( 'mysql' ),
-		'advisor_id'      => $advisor_id,
-		'get_the_ID'      => get_the_ID(),
-		'global_post_id'  => $post ? $post->ID : 'null',
-		'global_post_type' => $post ? $post->post_type : 'null',
-		'queried_object'  => get_queried_object_id(),
-		'is_singular'     => is_singular() ? 'yes' : 'no',
-		'author_id'       => $author_id,
-		'associated_posts' => $associated_posts,
-		'associated_count' => count( $associated_posts ),
-		'category_map_keys' => array_keys( $category_map ),
-		'ob_level'        => ob_get_level(),
-		'did_action_wp'   => did_action( 'wp' ),
-		'current_filter'  => current_filter(),
-		'is_admin'        => is_admin() ? 'yes' : 'no',
+		'timestamp'          => current_time( 'mysql' ),
+		'advisor_id'         => $advisor_id,
+		'advisor_id_type'    => gettype( $advisor_id ),
+		'get_the_ID'         => get_the_ID(),
+		'global_post_id'     => $post ? $post->ID : 'null',
+		'global_post_type'   => $post ? $post->post_type : 'null',
+		'queried_object'     => get_queried_object_id(),
+		'is_singular'        => is_singular() ? 'yes' : 'no',
+		'author_id'          => $author_id,
+		'wp_query_results'   => $associated_posts,
+		'wp_query_count'     => count( $associated_posts ),
+		'db_string_match'    => $db_associated,
+		'db_int_match'       => $db_associated_int,
+		'all_associations'   => $all_associated,
+		'category_map_keys'  => array_keys( $category_map ),
+		'ob_level'           => ob_get_level(),
+		'did_action_wp'      => did_action( 'wp' ),
+		'current_filter'     => current_filter(),
+		'is_admin'           => is_admin() ? 'yes' : 'no',
 	);
 
 	// Always log to error_log if debug is enabled
@@ -3512,14 +3548,19 @@ function esop_advisor_diagnostic_shortcode( $atts ) {
 
 	// Return HTML comment with diagnostic data (invisible but viewable in source)
 	$output = "\n<!-- ESOP Advisor Diagnostic\n";
-	$output .= "Advisor ID: {$diagnostic_data['advisor_id']}\n";
+	$output .= "Advisor ID: {$diagnostic_data['advisor_id']} (type: {$diagnostic_data['advisor_id_type']})\n";
 	$output .= "get_the_ID(): {$diagnostic_data['get_the_ID']}\n";
 	$output .= "Global \$post ID: {$diagnostic_data['global_post_id']}\n";
-	$output .= "Global \$post type: {$diagnostic_data['global_post_type']}\n";
-	$output .= "Associated posts count: {$diagnostic_data['associated_count']}\n";
-	$output .= "Associated post IDs: " . implode( ', ', $associated_posts ) . "\n";
-	$output .= "Output buffer level: {$diagnostic_data['ob_level']}\n";
-	$output .= "Current filter: {$diagnostic_data['current_filter']}\n";
+	$output .= "WP_Query associated count: {$diagnostic_data['wp_query_count']}\n";
+	$output .= "DB string match count: " . count( $db_associated ) . "\n";
+	$output .= "DB int match count: " . count( $db_associated_int ) . "\n";
+	$output .= "Total posts with _esop_associated_advisor: " . count( $all_associated ) . "\n";
+	if ( ! empty( $all_associated ) ) {
+		$output .= "Sample associations:\n";
+		foreach ( array_slice( $all_associated, 0, 10 ) as $assoc ) {
+			$output .= "  - Post {$assoc->post_id} ({$assoc->post_title}): advisor_id={$assoc->meta_value}\n";
+		}
+	}
 	$output .= "-->\n";
 
 	return $output;
