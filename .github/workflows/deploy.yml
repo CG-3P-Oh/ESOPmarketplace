@@ -14,6 +14,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Install LFTP
+        run: sudo apt-get update && sudo apt-get install -y lftp
+
       - name: Deploy changed files via LFTP
         timeout-minutes: 10
         run: |
