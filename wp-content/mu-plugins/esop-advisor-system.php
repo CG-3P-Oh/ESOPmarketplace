@@ -3653,13 +3653,54 @@ function esop_advisor_process_divi_dynamic_content( $value, $name, $settings ) {
 }
 
 /**
+ * Helper function to decode HTML entities in shortcodes
+ * Divi sometimes encodes brackets as HTML entities
+ */
+function esop_advisor_decode_shortcode_entities( $content ) {
+	if ( ! is_string( $content ) ) {
+		return $content;
+	}
+
+	// Decode HTML entities for square brackets
+	$content = str_replace(
+		array( '&#91;', '&#93;', '&#x5B;', '&#x5D;', '&lsqb;', '&rsqb;', '&lbrack;', '&rbrack;' ),
+		array( '[', ']', '[', ']', '[', ']', '[', ']' ),
+		$content
+	);
+
+	// Also decode URL-encoded brackets
+	$content = str_replace(
+		array( '%5B', '%5D', '%5b', '%5d' ),
+		array( '[', ']', '[', ']' ),
+		$content
+	);
+
+	return $content;
+}
+
+/**
+ * Helper function to check if content has ESOP shortcodes (after decoding)
+ */
+function esop_advisor_has_shortcodes( $content ) {
+	if ( ! is_string( $content ) ) {
+		return false;
+	}
+	$decoded = esop_advisor_decode_shortcode_entities( $content );
+	return strpos( $decoded, '[esop_' ) !== false;
+}
+
+/**
  * Process shortcodes in Divi text module output
  */
 add_filter( 'et_pb_text_content', 'esop_advisor_process_text_module_shortcodes', 10, 1 );
 
 function esop_advisor_process_text_module_shortcodes( $content ) {
+	// Decode any HTML entities first
+	$content = esop_advisor_decode_shortcode_entities( $content );
+
 	// Process esop shortcodes in text module content
-	if ( is_string( $content ) && strpos( $content, '[esop_' ) !== false ) {
+	if ( strpos( $content, '[esop_' ) !== false ) {
+		esop_advisor_debug_log( 'text_module: found shortcode, processing' );
 		$content = do_shortcode( $content );
 	}
 
@@ -3672,10 +3713,26 @@ function esop_advisor_process_text_module_shortcodes( $content ) {
 add_filter( 'et_pb_blurb_content', 'esop_advisor_process_blurb_module_shortcodes', 10, 1 );
 
 function esop_advisor_process_blurb_module_shortcodes( $content ) {
-	if ( is_string( $content ) && strpos( $content, '[esop_' ) !== false ) {
+	$content = esop_advisor_decode_shortcode_entities( $content );
+	if ( strpos( $content, '[esop_' ) !== false ) {
+		esop_advisor_debug_log( 'blurb_module: found shortcode, processing' );
 		$content = do_shortcode( $content );
 	}
+	return $content;
+}
 
+/**
+ * Process shortcodes in Divi Code module output
+ * Code modules don't have a specific content filter, so we catch them via et_pb_shortcode_output
+ */
+add_filter( 'et_pb_code_content', 'esop_advisor_process_code_module_shortcodes', 10, 1 );
+
+function esop_advisor_process_code_module_shortcodes( $content ) {
+	$content = esop_advisor_decode_shortcode_entities( $content );
+	if ( strpos( $content, '[esop_' ) !== false ) {
+		esop_advisor_debug_log( 'code_module: found shortcode, processing' );
+		$content = do_shortcode( $content );
+	}
 	return $content;
 }
 
@@ -3685,11 +3742,11 @@ function esop_advisor_process_blurb_module_shortcodes( $content ) {
 add_filter( 'the_content', 'esop_advisor_process_content_shortcodes', 5 );
 
 function esop_advisor_process_content_shortcodes( $content ) {
-	// Early processing of esop shortcodes before other filters
-	if ( is_string( $content ) && strpos( $content, '[esop_' ) !== false ) {
+	$content = esop_advisor_decode_shortcode_entities( $content );
+	if ( strpos( $content, '[esop_' ) !== false ) {
+		esop_advisor_debug_log( 'the_content: found shortcode, processing' );
 		$content = do_shortcode( $content );
 	}
-
 	return $content;
 }
 
@@ -3712,7 +3769,14 @@ function esop_advisor_process_widget_shortcodes( $content ) {
 add_filter( 'et_pb_shortcode_output', 'esop_advisor_process_module_output', 10, 3 );
 
 function esop_advisor_process_module_output( $output, $render_slug, $module ) {
-	if ( is_string( $output ) && strpos( $output, '[esop_' ) !== false ) {
+	if ( ! is_string( $output ) ) {
+		return $output;
+	}
+
+	// Decode HTML entities first
+	$output = esop_advisor_decode_shortcode_entities( $output );
+
+	if ( strpos( $output, '[esop_' ) !== false ) {
 		esop_advisor_debug_log( "process_module_output: found shortcode in module", array(
 			'render_slug'   => $render_slug,
 			'output_length' => strlen( $output ),
@@ -3732,7 +3796,12 @@ add_filter( 'et_theme_builder_template_after_body', 'esop_advisor_process_theme_
 add_filter( 'et_theme_builder_body_layout', 'esop_advisor_process_theme_builder_body', 10, 1 );
 
 function esop_advisor_process_theme_builder_body( $content ) {
-	if ( is_string( $content ) && strpos( $content, '[esop_' ) !== false ) {
+	if ( ! is_string( $content ) ) {
+		return $content;
+	}
+
+	$content = esop_advisor_decode_shortcode_entities( $content );
+	if ( strpos( $content, '[esop_' ) !== false ) {
 		esop_advisor_debug_log( "process_theme_builder_body: found shortcode", strlen( $content ) );
 		$content = do_shortcode( $content );
 		esop_advisor_debug_log( "process_theme_builder_body: after do_shortcode", strlen( $content ) );
@@ -3746,10 +3815,53 @@ function esop_advisor_process_theme_builder_body( $content ) {
 add_filter( 'et_pb_builder_post_content_capability', 'esop_advisor_process_builder_content', 10, 1 );
 
 function esop_advisor_process_builder_content( $content ) {
-	if ( is_string( $content ) && strpos( $content, '[esop_' ) !== false ) {
+	if ( ! is_string( $content ) ) {
+		return $content;
+	}
+	$content = esop_advisor_decode_shortcode_entities( $content );
+	if ( strpos( $content, '[esop_' ) !== false ) {
+		esop_advisor_debug_log( 'builder_content: found shortcode, processing' );
 		$content = do_shortcode( $content );
 	}
 	return $content;
+}
+
+/**
+ * Process shortcodes in Divi row/section/column content
+ * These filters catch shortcodes placed directly in layout elements
+ */
+add_filter( 'et_pb_row_inner_content', 'esop_advisor_process_layout_content', 10, 1 );
+add_filter( 'et_pb_section_inner_content', 'esop_advisor_process_layout_content', 10, 1 );
+add_filter( 'et_pb_column_inner_content', 'esop_advisor_process_layout_content', 10, 1 );
+
+function esop_advisor_process_layout_content( $content ) {
+	if ( ! is_string( $content ) ) {
+		return $content;
+	}
+	$content = esop_advisor_decode_shortcode_entities( $content );
+	if ( strpos( $content, '[esop_' ) !== false ) {
+		esop_advisor_debug_log( 'layout_content: found shortcode, processing' );
+		$content = do_shortcode( $content );
+	}
+	return $content;
+}
+
+/**
+ * AGGRESSIVE: Process shortcodes in ALL Divi module content via render filter
+ * This runs at priority 999 to be the last filter
+ */
+add_filter( 'et_module_shortcode_output', 'esop_advisor_process_all_module_output', 999, 3 );
+
+function esop_advisor_process_all_module_output( $output, $render_slug = '', $module = null ) {
+	if ( ! is_string( $output ) ) {
+		return $output;
+	}
+	$output = esop_advisor_decode_shortcode_entities( $output );
+	if ( strpos( $output, '[esop_' ) !== false ) {
+		esop_advisor_debug_log( "all_module_output: found shortcode in {$render_slug}", strlen( $output ) );
+		$output = do_shortcode( $output );
+	}
+	return $output;
 }
 
 /**
@@ -3759,9 +3871,20 @@ function esop_advisor_process_builder_content( $content ) {
 add_action( 'template_redirect', 'esop_advisor_setup_output_buffer' );
 
 function esop_advisor_setup_output_buffer() {
-	// Only on advisor pages
+	// Check multiple ways if this is an advisor page
 	$advisor_id = esop_advisor_get_current_advisor_id();
-	if ( ! $advisor_id ) {
+	$is_advisor_page = $advisor_id || is_singular( 'esop_advisor' );
+
+	// Also check by queried object as fallback
+	if ( ! $is_advisor_page ) {
+		$queried = get_queried_object();
+		if ( $queried && isset( $queried->post_type ) && $queried->post_type === 'esop_advisor' ) {
+			$is_advisor_page = true;
+			$advisor_id = $queried->ID;
+		}
+	}
+
+	if ( ! $is_advisor_page ) {
 		return;
 	}
 
@@ -3771,20 +3894,20 @@ function esop_advisor_setup_output_buffer() {
 
 function esop_advisor_process_final_output( $output ) {
 	$original_length = strlen( $output );
+
+	// First, decode ALL HTML entities for square brackets
+	$output = esop_advisor_decode_shortcode_entities( $output );
+
+	// Check for shortcodes after decoding
+	$has_shortcodes = strpos( $output, '[esop_' ) !== false;
+
 	esop_advisor_debug_log( "process_final_output: received output", array(
 		'length'          => $original_length,
-		'has_esop_shortcodes' => strpos( $output, '[esop_' ) !== false ? 'yes' : 'no',
-		'has_encoded'     => strpos( $output, '%5Besop_' ) !== false ? 'yes' : 'no',
+		'has_esop_shortcodes' => $has_shortcodes ? 'yes' : 'no',
 	) );
 
 	// Process any remaining esop shortcodes in the final output
-	if ( strpos( $output, '[esop_' ) !== false || strpos( $output, '%5Besop_' ) !== false ) {
-		// First, decode any URL-encoded shortcodes (Divi sometimes encodes brackets)
-		$output = str_replace(
-			array( '%5B', '%5D', '%5b', '%5d' ),
-			array( '[', ']', '[', ']' ),
-			$output
-		);
+	if ( $has_shortcodes ) {
 
 		// Handle href attributes that contain ONLY a shortcode (e.g., href="[esop_email]")
 		// This needs to run BEFORE general shortcode processing
