@@ -8222,7 +8222,10 @@ function esop_lead_list_view() {
 
 /**
  * WP_List_Table extension for advisor leads
+ * Only define in admin context — WP_List_Table does not exist on the frontend.
  */
+if ( is_admin() ) :
+
 class ESOP_Lead_List_Table extends WP_List_Table {
 
 	public function __construct() {
@@ -8580,6 +8583,8 @@ class ESOP_Lead_List_Table extends WP_List_Table {
 		echo 'No leads found.';
 	}
 }
+
+endif; // is_admin() — end WP_List_Table class guard
 
 // --- 6. Detail View ---
 
