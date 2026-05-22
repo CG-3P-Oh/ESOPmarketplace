@@ -1,0 +1,163 @@
+================================================================================
+SORTING FEATURE - EXACT CODE ADDITIONS
+================================================================================
+
+CHANGE #1: Version Number (Line 5)
+-----------------------------------
+OLD: * Version: 1.31.2
+NEW: * Version: 1.32.0
+     * Changelog: v1.32.0 - Added sortable directory (First Name, Last Name, Company)
+
+
+CHANGE #2: Sort Buttons HTML (Added after line 7307)
+-----------------------------------------------------
+LOCATION: Inside esop_advisor_directory_shortcode(), after checking if posts exist
+
+ADD THIS:
+		<!-- Sort Controls -->
+		<div class="advisor-sort-controls">
+			<span class="sort-label">Sort by:</span>
+			<button class="sort-btn active" data-sort="firstname">First Name</button>
+			<button class="sort-btn" data-sort="lastname">Last Name</button>
+			<button class="sort-btn" data-sort="company">Company</button>
+		</div>
+
+
+CHANGE #3: Data Attributes on Advisor Cards (Line ~7328)
+---------------------------------------------------------
+LOCATION: In the loop, before the <div class="advisor-card"> output
+
+ADD THIS CODE BEFORE THE DIV:
+				// Parse name for sorting
+				$name_parts = explode( ' ', trim( $advisor_name ) );
+				$firstname  = $name_parts[0];
+				$lastname   = count( $name_parts ) > 1 ? end( $name_parts ) : '';
+				?>
+
+CHANGE THE DIV FROM:
+				<div class="advisor-card">
+
+TO:
+				<div class="advisor-card"
+					data-firstname="<?php echo esc_attr( strtolower( $firstname ) ); ?>"
+					data-lastname="<?php echo esc_attr( strtolower( $lastname ) ); ?>"
+					data-company="<?php echo esc_attr( strtolower( $company ) ); ?>">
+
+
+CHANGE #4: JavaScript (Add before "return ob_get_clean();")
+------------------------------------------------------------
+LOCATION: End of esop_advisor_directory_shortcode(), before return statement
+
+ADD THIS:
+	<!-- Sorting JavaScript -->
+	<script>
+	(function() {
+		document.addEventListener('DOMContentLoaded', function() {
+			const sortButtons = document.querySelectorAll('.esop-advisor-directory .sort-btn');
+			const grid = document.querySelector('.esop-advisor-directory .advisor-grid');
+
+			if (!sortButtons.length || !grid) return;
+
+			sortButtons.forEach(function(btn) {
+				btn.addEventListener('click', function() {
+					const sortBy = this.getAttribute('data-sort');
+
+					// Update active state
+					sortButtons.forEach(function(b) { b.classList.remove('active'); });
+					this.classList.add('active');
+
+					// Get all advisor cards
+					const cards = Array.from(grid.querySelectorAll('.advisor-card'));
+
+					// Sort cards
+					cards.sort(function(a, b) {
+						let aVal = a.getAttribute('data-' + sortBy) || '';
+						let bVal = b.getAttribute('data-' + sortBy) || '';
+
+						// Handle empty values - put them at the end
+						if (!aVal && !bVal) return 0;
+						if (!aVal) return 1;
+						if (!bVal) return -1;
+
+						return aVal.localeCompare(bVal);
+					});
+
+					// Re-append cards in sorted order
+					cards.forEach(function(card) {
+						grid.appendChild(card);
+					});
+				});
+			});
+		});
+	})();
+	</script>
+
+
+CHANGE #5: CSS Styles (Add to esop_advisor_directory_css())
+------------------------------------------------------------
+LOCATION: In esop_advisor_directory_css() function, before the closing </style> tag
+
+ADD THIS:
+	/* Sort Controls */
+	.esop-advisor-directory .advisor-sort-controls {
+		display: flex !important;
+		align-items: center !important;
+		gap: 12px !important;
+		margin-bottom: 25px !important;
+		padding: 15px 20px !important;
+		background: #f8f9fa !important;
+		border-radius: 8px !important;
+		flex-wrap: wrap !important;
+	}
+
+	.esop-advisor-directory .sort-label {
+		font-size: 14px !important;
+		font-weight: 600 !important;
+		color: #333 !important;
+		margin-right: 5px !important;
+	}
+
+	.esop-advisor-directory .sort-btn {
+		padding: 8px 18px !important;
+		background: #fff !important;
+		color: #555 !important;
+		border: 2px solid #ddd !important;
+		border-radius: 5px !important;
+		font-size: 13px !important;
+		font-weight: 600 !important;
+		cursor: pointer !important;
+		transition: all 0.2s ease !important;
+		outline: none !important;
+	}
+
+	.esop-advisor-directory .sort-btn:hover {
+		background: #f0f4f8 !important;
+		border-color: #0C71C3 !important;
+		color: #0C71C3 !important;
+	}
+
+	.esop-advisor-directory .sort-btn.active {
+		background: #0C71C3 !important;
+		color: #fff !important;
+		border-color: #0C71C3 !important;
+	}
+
+	/* Responsive: Stack sort buttons on mobile */
+	@media (max-width: 600px) {
+		.esop-advisor-directory .advisor-sort-controls {
+			flex-direction: column !important;
+			align-items: flex-start !important;
+			gap: 10px !important;
+		}
+
+		.esop-advisor-directory .sort-btn {
+			width: 100% !important;
+		}
+	}
+
+================================================================================
+END OF CHANGES
+================================================================================
+
+These are the ONLY 5 changes made to add sorting functionality.
+All other functions remain unchanged.
