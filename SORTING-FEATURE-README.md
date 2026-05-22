@@ -1,9 +1,11 @@
 # ESOP Advisor Directory - Sorting Feature Added
 
-## Version: 1.32.0
+## Version: 1.32.1
 
 ### Summary
 Added client-side sortable functionality to the `[esop_advisor_directory]` shortcode. Advisors can now be sorted by First Name, Last Name, or Company without page reload.
+
+**v1.32.1 Fix:** Moved JavaScript to `wp_footer` to prevent WordPress `wpautop` filter from wrapping it in `<p>` tags (which caused syntax errors).
 
 ---
 
@@ -67,11 +69,11 @@ Sort button styles added:
 
 ### Modified Sections:
 
-1. **Line 3-5:** Version updated to 1.32.0 with changelog
-2. **Line ~7307:** Added sort controls HTML
-3. **Line ~7328-7336:** Added name parsing and data attributes to advisor cards
-4. **Line ~7390-7425:** Added JavaScript for sorting functionality
-5. **Line ~7254-7310:** Added CSS for sort buttons
+1. **Line 4-6:** Version updated to 1.32.1 with changelog
+2. **Line ~7254-7310:** Added CSS for sort buttons (outputs via wp_footer)
+3. **Line ~7316-7365:** Added JavaScript for sorting functionality (outputs via wp_footer)
+4. **Line ~7354:** Added sort controls HTML
+5. **Line ~7375-7383:** Added name parsing and data attributes to advisor cards
 
 ---
 
@@ -130,11 +132,14 @@ Sort button styles added:
 
 ## File Details
 
-- **Filename:** `esop-advisor-system-v1.32.0-with-sorting.php`
+- **Filename:** `esop-advisor-system-v1.32.0-with-sorting.php` (version 1.32.1)
 - **Size:** ~400KB
-- **Lines:** 11,363 (added ~45 lines)
+- **Lines:** 11,411 (added ~93 lines from original)
 - **PHP Version:** 7.4+ compatible
 - **WordPress:** 5.0+ compatible
+
+### v1.32.1 Fix Details:
+The initial v1.32.0 had JavaScript output inline in the shortcode, which WordPress `wpautop` filter wrapped in `<p>` tags, breaking syntax. v1.32.1 moves JavaScript to a separate `esop_advisor_directory_js()` function hooked to `wp_footer` (priority 10), matching the pattern used by the CSS function.
 
 ---
 
