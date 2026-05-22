@@ -2,9 +2,9 @@
 /**
  * Plugin Name: ESOP Advisor System
  * Description: Complete ESOP Advisor directory with MapBox map integration. Self-contained MU plugin with no third-party dependencies.
- * Version: 1.32.0
+ * Version: 1.32.1
  * Author: ESOP Marketplace / 3PRIME
- * Changelog: v1.32.0 - Added sortable directory (First Name, Last Name, Company)
+ * Changelog: v1.32.1 - Fixed JavaScript wrapping issue (moved to wp_footer); v1.32.0 - Added sortable directory
  * Text Domain: esop-advisor
  *
  * INSTALLATION:
@@ -7313,6 +7313,58 @@ function esop_advisor_directory_css() {
 	<?php
 }
 
+add_action( 'wp_footer', 'esop_advisor_directory_js', 10 );
+
+function esop_advisor_directory_js() {
+	global $esop_advisor_directory_used;
+	if ( empty( $esop_advisor_directory_used ) ) {
+		return;
+	}
+	?>
+	<script id="esop-advisor-directory-js">
+	(function() {
+		document.addEventListener('DOMContentLoaded', function() {
+			const sortButtons = document.querySelectorAll('.esop-advisor-directory .sort-btn');
+			const grid = document.querySelector('.esop-advisor-directory .advisor-grid');
+
+			if (!sortButtons.length || !grid) return;
+
+			sortButtons.forEach(function(btn) {
+				btn.addEventListener('click', function() {
+					const sortBy = this.getAttribute('data-sort');
+
+					// Update active state
+					sortButtons.forEach(function(b) { b.classList.remove('active'); });
+					this.classList.add('active');
+
+					// Get all advisor cards
+					const cards = Array.from(grid.querySelectorAll('.advisor-card'));
+
+					// Sort cards
+					cards.sort(function(a, b) {
+						let aVal = a.getAttribute('data-' + sortBy) || '';
+						let bVal = b.getAttribute('data-' + sortBy) || '';
+
+						// Handle empty values - put them at the end
+						if (!aVal && !bVal) return 0;
+						if (!aVal) return 1;
+						if (!bVal) return -1;
+
+						return aVal.localeCompare(bVal);
+					});
+
+					// Re-append cards in sorted order
+					cards.forEach(function(card) {
+						grid.appendChild(card);
+					});
+				});
+			});
+		});
+	})();
+	</script>
+	<?php
+}
+
 function esop_advisor_directory_shortcode( $atts ) {
 	// Mark that shortcode is used so CSS outputs in footer
 	global $esop_advisor_directory_used;
@@ -7443,49 +7495,6 @@ function esop_advisor_directory_shortcode( $atts ) {
 			</div>
 		<?php endif; ?>
 	</div>
-
-	<!-- Sorting JavaScript -->
-	<script>
-	(function() {
-		document.addEventListener('DOMContentLoaded', function() {
-			const sortButtons = document.querySelectorAll('.esop-advisor-directory .sort-btn');
-			const grid = document.querySelector('.esop-advisor-directory .advisor-grid');
-
-			if (!sortButtons.length || !grid) return;
-
-			sortButtons.forEach(function(btn) {
-				btn.addEventListener('click', function() {
-					const sortBy = this.getAttribute('data-sort');
-
-					// Update active state
-					sortButtons.forEach(function(b) { b.classList.remove('active'); });
-					this.classList.add('active');
-
-					// Get all advisor cards
-					const cards = Array.from(grid.querySelectorAll('.advisor-card'));
-
-					// Sort cards
-					cards.sort(function(a, b) {
-						let aVal = a.getAttribute('data-' + sortBy) || '';
-						let bVal = b.getAttribute('data-' + sortBy) || '';
-
-						// Handle empty values - put them at the end
-						if (!aVal && !bVal) return 0;
-						if (!aVal) return 1;
-						if (!bVal) return -1;
-
-						return aVal.localeCompare(bVal);
-					});
-
-					// Re-append cards in sorted order
-					cards.forEach(function(card) {
-						grid.appendChild(card);
-					});
-				});
-			});
-		});
-	})();
-	</script>
 	<?php
 
 	return ob_get_clean();
