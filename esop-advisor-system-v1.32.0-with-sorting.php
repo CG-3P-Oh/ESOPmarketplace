@@ -2,9 +2,9 @@
 /**
  * Plugin Name: ESOP Advisor System
  * Description: Complete ESOP Advisor directory with MapBox map integration. Self-contained MU plugin with no third-party dependencies.
- * Version: 1.32.1
+ * Version: 1.32.2
  * Author: ESOP Marketplace / 3PRIME
- * Changelog: v1.32.1 - Fixed JavaScript wrapping issue (moved to wp_footer); v1.32.0 - Added sortable directory
+ * Changelog: v1.32.2 - Fixed empty <p> tag appearing in grid; v1.32.1 - Fixed JS wrapping; v1.32.0 - Added sortable directory
  * Text Domain: esop-advisor
  *
  * INSTALLATION:
@@ -7353,7 +7353,8 @@ function esop_advisor_directory_js() {
 						return aVal.localeCompare(bVal);
 					});
 
-					// Re-append cards in sorted order
+					// Clear grid and re-append cards in sorted order
+					grid.innerHTML = '';
 					cards.forEach(function(card) {
 						grid.appendChild(card);
 					});
